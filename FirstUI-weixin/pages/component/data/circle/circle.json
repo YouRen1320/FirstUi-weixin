@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "圆形进度条",
+  "usingComponents": {
+    "fui-circle":"/components/firstui/fui-circle/fui-circle"
+  }
+}

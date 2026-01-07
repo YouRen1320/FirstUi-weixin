@@ -1,0 +1,17 @@
+<fui-list topBorder="{{false}}" bottomBorder bottomLeft="32" bottomRight="32">
+		<view class="fui-news__item" bindtap="handleClick">
+			<fui-overflow-hidden text="{{item.title || ''}}" size="36" rows="{{3}}"></fui-overflow-hidden>
+			<view class="fui-image__list" wx:if="{{item.imageList && item.imageList.length}}">
+				<fui-lazyload src="{{src}}" wx:for-item="src" wx:for="{{item.imageList}}" wx:key="index"
+					width="{{item.imageList.length>1?200:400}}" height="{{item.imageList.length>1?200:0}}" marginRight="20"
+					mode="aspectFill"></fui-lazyload>
+			</view>
+			<view class="fui-news__info">
+				<fui-text wx:if="{{item.isTop}}" padding="0 20rpx 0 0" text="置顶" size="25" color="#FF2B2B">
+				</fui-text>
+				<fui-text padding="0 20rpx 0 0" text="{{item.source || ''}}" size="25" color="#7F7F7F">
+				</fui-text>
+				<fui-text text="{{item.comment}}评论" size="25" color="#7F7F7F"></fui-text>
+			</view>
+		</view>
+	</fui-list>

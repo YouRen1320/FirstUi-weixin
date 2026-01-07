@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "搜索栏",
+  "usingComponents": {
+    "fui-search-bar":"/components/firstui/fui-search-bar/fui-search-bar"
+  }
+}

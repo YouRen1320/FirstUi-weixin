@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Result 演示",
+  "usingComponents": {
+    "fui-result": "/components/firstui/fui-result/fui-result"
+  }
+}

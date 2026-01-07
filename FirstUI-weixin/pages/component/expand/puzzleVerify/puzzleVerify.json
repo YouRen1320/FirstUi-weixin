@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "滑块拼图验证",
+  "usingComponents": {
+    "fui-puzzle-verify": "/components/firstui/fui-puzzle-verify/fui-puzzle-verify"
+  }
+}

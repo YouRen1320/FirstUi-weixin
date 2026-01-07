@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "纵向选项卡",
+  "navigationBarBackgroundColor": "#f8f8f8",
+  "disableScroll": true,
+  "usingComponents": {
+    "fui-vtabs": "/components/firstui/fui-vtabs/fui-vtabs",
+    "fui-vtabs-content": "/components/firstui/fui-vtabs-content/fui-vtabs-content"
+  }
+}

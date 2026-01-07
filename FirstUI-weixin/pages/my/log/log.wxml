@@ -1,0 +1,11 @@
+<view class="fui-wrap">
+  <fui-list-cell bottom-right="32" highlight="{{false}}">
+    <text class="fui-title">First UI {{version}}（{{date}}）</text>
+  </fui-list-cell>
+  <view class="fui-content">
+    <view class="fui-p" wx:for="{{logs}}" wx:key="index">
+      <text class="fui-sign" wx:if="{{logs.length>1}}">-</text>
+      <text>{{item}}</text>
+    </view>
+  </view>
+</view>

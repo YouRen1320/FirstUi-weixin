@@ -1,0 +1,14 @@
+<view class="fui-wrap" :style="{marginTop:top}">
+		<fui-status-bar bindinit="init"></fui-status-bar>
+		<image style="top:{{top}}" class="fui-back--icon" src="/static/images/layout/icon_back_3x.png" bindtap="onBack">
+		</image>
+		<view class="fui-content">
+			<text class="fui-text">welcome to this page!</text>
+		</view>
+		<view style="width:100%;height: 600px;"></view>
+		<view class="fui-content">
+			<text class="fui-text">背景图～</text>
+		</view>
+		<!-- <fui-background-image :absolute="true" background="linear-gradient(to top right, rgb(238, 163, 175), rgb(149, 214, 240));"></fui-background-image> -->
+		<fui-background-image src="/static/images/component/bg.jpeg"></fui-background-image>
+	</view>

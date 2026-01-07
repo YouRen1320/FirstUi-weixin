@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "横幅底部圆弧",
+  "usingComponents": {
+    "fui-banner-arc":"/components/firstui/fui-banner-arc/fui-banner-arc",
+    "fui-section":"/components/firstui/fui-section/fui-section"
+  }
+}

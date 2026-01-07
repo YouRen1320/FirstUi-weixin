@@ -1,0 +1,10 @@
+<view class="fui-wrap">
+		<fui-image-cropper height="{{400}}" src="{{src}}" id="cropper"></fui-image-cropper>
+		<view class="fui-cropper__tabbar">
+			<text class="fui-text" catchtap="chooseImage">选择</text>
+			<view class="fui-flex__center fui-flex__1" catchtap="rotate">
+				<fui-icon name="rotate" color="#fff" size="52"></fui-icon>
+			</view>
+			<text class="fui-text" catchtap="cutting">确定</text>
+		</view>
+	</view>

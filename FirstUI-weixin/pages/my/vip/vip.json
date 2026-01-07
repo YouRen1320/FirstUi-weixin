@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "会员权益",
+  "enablePullDownRefresh": false,
+  "backgroundColor": "#181818",
+  "backgroundColorTop": "#181818",
+  "backgroundColorBottom": "#181818",
+  "backgroundTextStyle": "light",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#181818",
+  "usingComponents": {
+    "fui-animation":"/components/firstui/fui-animation/fui-animation"
+  }
+}

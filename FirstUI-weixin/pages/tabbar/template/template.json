@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "First UI",
+  "enablePullDownRefresh": false,
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFF"
+}

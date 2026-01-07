@@ -1,0 +1,73 @@
+<view class="fui-wrap">
+		<view class="fui-page__hd">
+			<view class="fui-page__title fui-align__center" bindtap="vip">CubicBezier <image
+					src="/static/images/index/light/icon_member_3x.png"></image>
+			</view>
+			<view class="fui-page__desc">CubicBezier 贝塞尔曲线，可用于加入购物车动画。</view>
+		</view>
+		<view class="fui-page__bd">
+			<view class="fui-section__title">左下方</view>
+			<fui-list-cell highlight="{{false}}">
+				<view class="fui-list__item">
+					<text class="fui-text">点击加号加入购物车</text>
+					<fui-cubic-bezier left="{{left}}" bottom="{{bottom}}" param="{{0}}" bindclick="handleClick">
+						<fui-icon name="plussign"></fui-icon>
+						<view slot="badge" class="fui-badge">1</view>
+					</fui-cubic-bezier>
+				</view>
+			</fui-list-cell>
+			<fui-list-cell highlight="{{false}}">
+				<view class="fui-list__item">
+					<text class="fui-text">点击加号加入购物车</text>
+					<fui-cubic-bezier left="{{left}}" bottom="{{bottom}}" param="{{1}}" bindclick="handleClick">
+						<fui-icon name="plussign"></fui-icon>
+            <image slot="badge" class="fui-badge--logo" src="/static/images/common/img_logo.png"></image>
+					</fui-cubic-bezier>
+				</view>
+			</fui-list-cell>
+			<fui-list-cell highlight="{{false}}">
+				<view class="fui-list__item">
+					<fui-cubic-bezier left="{{left}}" bottom="{{bottom}}" param="{{1}}" bindclick="handleClick">
+						<fui-icon name="plussign"></fui-icon>
+            <image slot="badge" class="fui-badge--logo" src="/static/images/common/img_logo.png"></image>
+					</fui-cubic-bezier>
+					<text class="fui-text">点击加号加入购物车</text>
+				</view>
+			</fui-list-cell>
+			<view class="fui-section__title">右下方</view>
+			<fui-list-cell highlight="{{false}}">
+				<view class="fui-list__item">
+					<text class="fui-text">点击加号加入购物车</text>
+					<fui-cubic-bezier direction="rb" right="{{right}}" bottom="{{bottom}}" param="{{1}}" bindclick="handleClick">
+						<fui-icon name="plussign"></fui-icon>
+            <image slot="badge" class="fui-badge--logo" src="/static/images/common/img_logo.png"></image>
+					</fui-cubic-bezier>
+				</view>
+			</fui-list-cell>
+			<fui-list-cell highlight="{{false}}">
+				<view class="fui-list__item">
+					<fui-cubic-bezier direction="rb" right="{{right}}" bottom="{{bottom}}" param="{{0}}" bindclick="handleClick">
+						<fui-icon name="plussign"></fui-icon>
+						<view slot="badge" class="fui-badge">1</view>
+					</fui-cubic-bezier>
+					<text class="fui-text">点击加号加入购物车</text>
+				</view>
+			</fui-list-cell>
+			<fui-list-cell highlight="{{false}}">
+				<view class="fui-list__item">
+					<fui-cubic-bezier direction="rb" right="{{right}}" bottom="{{bottom}}" param="{{1}}" bindclick="handleClick">
+						<fui-icon name="plussign"></fui-icon>
+            <image slot="badge" class="fui-badge--logo" src="/static/images/common/img_logo.png"></image>
+					</fui-cubic-bezier>
+					<text class="fui-text">点击加号加入购物车</text>
+				</view>
+			</fui-list-cell>
+
+		</view>
+		<view class="fui-cart--box">
+			<fui-icon name="cart"></fui-icon>
+		</view>
+		<view class="fui-cart--box fui-cart--right">
+			<fui-icon name="cart"></fui-icon>
+		</view>
+	</view>

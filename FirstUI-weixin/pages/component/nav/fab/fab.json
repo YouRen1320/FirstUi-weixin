@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "浮动按钮",
+  "usingComponents": {
+    "fui-fab": "/components/firstui/fui-fab/fui-fab"
+  }
+}

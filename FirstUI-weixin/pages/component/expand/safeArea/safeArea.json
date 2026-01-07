@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "底部安全区域",
+  "usingComponents": {
+    "fui-safe-area":"/components/firstui/fui-safe-area/fui-safe-area",
+    "fui-divider":"/components/firstui/fui-divider/fui-divider"
+  }
+}

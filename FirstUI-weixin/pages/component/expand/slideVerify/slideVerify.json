@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "滑动验证",
+  "usingComponents": {
+    "fui-slide-verify":"/components/firstui/fui-slide-verify/fui-slide-verify"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "表格",
+  "usingComponents": {
+    "fui-table":"/components/firstui/fui-table/fui-table"
+  }
+}

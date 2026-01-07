@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "横向滚动容器",
+  "usingComponents": {
+    "fui-horizontal-scroll":"/components/firstui/fui-horizontal-scroll/fui-horizontal-scroll",
+    "fui-lazyload":"/components/firstui/fui-lazyload/fui-lazyload",
+    "fui-text":"/components/firstui/fui-text/fui-text"
+  }
+}

@@ -1,0 +1,4 @@
+<view class="fui-item" style="width:{{width}}px;height:{{height}}px">
+  <image src="{{model.src}}" class="fui-img"></image>
+  <text class="fui-text">{{model.text}}</text>
+</view>

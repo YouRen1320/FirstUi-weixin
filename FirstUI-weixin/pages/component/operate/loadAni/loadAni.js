@@ -1,0 +1,6 @@
+
+Page({
+  vip() {
+    wx.fui.href("/pages/my/qa/qa?index=2&title=VIP专属内容")
+  }
+})

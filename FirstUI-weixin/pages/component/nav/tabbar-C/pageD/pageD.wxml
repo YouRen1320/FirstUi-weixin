@@ -1,0 +1,22 @@
+<view class="fui-wrap">
+  <view class="fui-logo__box">
+    <image src="/static/images/common/img_logo.png" class="fui-logo" mode="widthFix"></image>
+    <view class="fui-title">First UI</view>
+    <view class="fui-version">Version {{version}}</view>
+  </view>
+  <view class="fui-page__bd">
+    <view class="fui-desc">
+      <text class="fui-mr">First UI</text> 是一套基于uni-app开发的组件化、可复用、易扩展、低耦合的跨平台移动端UI 组件库。
+    </view>
+    <fui-list-cell topBorder arrow bindclick="getLink">
+      去STAR
+    </fui-list-cell>
+    <fui-list-cell arrow bindclick="href" data-page="/pages/my/updated/updated">
+      功能介绍
+    </fui-list-cell>
+    <fui-list-cell bottomLeft="0" arrow bindclick="href" data-page="/pages/my/vip/vip">
+      会员介绍
+    </fui-list-cell>
+    <fui-footer isFixed text="Copyright © 2021 First UI. All Rights Reserved."></fui-footer>
+  </view>
+</view>

@@ -1,0 +1,91 @@
+<view class="fui-wrap">
+    <view class="fui-page__hd">
+			<view class="fui-page__title fui-align__center" bindtap="vip">GoodsBar <image
+					src="/static/images/index/light/icon_member_3x.png"></image>
+			</view>
+			<view class="fui-page__desc">商品导航栏，常用的页面布局，可提升开发效率以及带来舒服的视觉效果！</view>
+		</view>
+		<view class="fui-page__bd">
+			<!-- 布局内容 start -->
+			<view class="fui-section__title">商品导航栏</view>
+			<view class="fui-goods__bar-wrap fui-goodsbar__flex">
+				<view class="fui-goods__bar-left fui-goodsbar__flex">
+					<view class="fui-goodsbar__item">
+						<fui-icon name="shop" size="{{40}}"></fui-icon>
+						<text class="fui-goodsbar__text">店铺</text>
+					</view>
+					<view class="fui-goodsbar__item">
+						<fui-icon name="message" size="{{40}}"></fui-icon>
+						<text class="fui-goodsbar__text">客服</text>
+					</view>
+					<view class="fui-goodsbar__item">
+						<fui-icon name="cart" size="{{40}}"></fui-icon>
+						<text class="fui-goodsbar__text">购物车</text>
+					</view>
+				</view>
+				<view class="fui-goods__bar-right fui-goodsbar__flex">
+					<view class="fui-gb__btn-box">
+						<fui-button text="加入购物车" type="warning" height="72rpx" size="{{28}}" radius="40rpx"></fui-button>
+					</view>
+					<view class="fui-gb__btn-box">
+						<fui-button text="立即购买" type="danger" height="72rpx" size="{{28}}" radius="40rpx"></fui-button>
+					</view>
+				</view>
+			</view>
+
+			<view class="fui-section__title">商品导航栏</view>
+			<view class="fui-goods__bar-wrap fui-goodsbar__flex">
+				<view class="fui-goods__bar-left fui-goodsbar__flex">
+					<view class="fui-goodsbar__item">
+						<fui-icon name="message" size="{{40}}"></fui-icon>
+						<text class="fui-goodsbar__text">客服</text>
+					</view>
+					<view class="fui-goodsbar__item">
+						<fui-icon name="cart" size="{{40}}"></fui-icon>
+						<text class="fui-goodsbar__text">购物车</text>
+					</view>
+				</view>
+				<view class="fui-goods__bar-right fui-goodsbar__flex fui-gb__right-width">
+					<view class="fui-gb__btn-box">
+						<fui-button text="加入购物车" type="warning" height="72rpx" size="{{28}}" radius="40rpx"></fui-button>
+					</view>
+					<view class="fui-gb__btn-box">
+						<fui-button text="立即购买" type="danger" height="72rpx" size="{{28}}" radius="40rpx"></fui-button>
+					</view>
+				</view>
+			</view>
+
+			<view class="fui-goodsbar__fixed">
+				<view class="fui-goods__bar-wrap fui-goodsbar__flex">
+					<view class="fui-goods__bar-left fui-goodsbar__flex">
+						<view class="fui-goodsbar__item">
+							<fui-icon name="shop" size="{{40}}" color="#FF2B2B"></fui-icon>
+							<text class="fui-goodsbar__text">店铺</text>
+						</view>
+						<view class="fui-goodsbar__item">
+							<fui-icon name="message" size="{{40}}"></fui-icon>
+							<text class="fui-goodsbar__text">客服</text>
+						</view>
+						<view class="fui-goodsbar__item">
+							<view class="fui-gb__icon-box">
+								<fui-icon name="cart" size="{{40}}"></fui-icon>
+								<fui-badge absolute value="{{2}}" type="danger" scaleRatio="{{0.8}}"></fui-badge>
+							</view>
+							<text class="fui-goodsbar__text">购物车</text>
+						</view>
+					</view>
+					<view class="fui-goods__bar-right fui-goodsbar__flex">
+						<view class="fui-gb__btn-box">
+							<fui-button text="加入购物车" type="warning" height="72rpx" size="{{28}}" radius="40rpx">
+							</fui-button>
+						</view>
+						<view class="fui-gb__btn-box">
+							<fui-button text="立即购买" type="danger" height="72rpx" size="{{28}}" radius="40rpx"></fui-button>
+						</view>
+					</view>
+				</view>
+				<fui-safe-area></fui-safe-area>
+			</view>
+			<!-- 布局内容 end -->
+		</view>
+	</view>

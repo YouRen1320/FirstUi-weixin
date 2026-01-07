@@ -1,0 +1,17 @@
+<view class="fui-wrap">
+  <view wx:if="{{type==='custom'}}">
+    <fui-result type="{{type}}" title="{{title}}" descr="{{descr}}">
+      <fui-icon slot="icon" name="warning" color="#FF2B2B" size="{{128}}"></fui-icon>
+      <fui-button width="400rpx" height="84rpx" text="主要操作" type="{{btnType}}" bold margin="48rpx 0 24rpx">
+      </fui-button>
+      <fui-button width="400rpx" height="84rpx" text="次要操作" type="gray" color="{{color}}" bold></fui-button>
+    </fui-result>
+  </view>
+  <view wx:else>
+    <fui-result type="{{type}}" title="{{title}}" descr="{{descr}}">
+      <fui-button width="400rpx" height="84rpx" text="主要操作" type="{{btnType}}" bold margin="48rpx 0 24rpx">
+      </fui-button>
+      <fui-button width="400rpx" height="84rpx" text="次要操作" type="gray" color="{{color}}" bold></fui-button>
+    </fui-result>
+  </view>
+</view>

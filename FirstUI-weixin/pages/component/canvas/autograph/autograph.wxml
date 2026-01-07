@@ -1,0 +1,21 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title fui-align__center" bindtap="vip">Autograph <image src="/static/images/index/light/icon_member_3x.png"></image>
+    </view>
+    <view class="fui-page__desc">Autograph 手写签名，用于手写电子签名。</view>
+  </view>
+  <view class="fui-page__bd">
+    <view class="fui-section__title">请在下方空白处签名</view>
+    <fui-autograph id="autograph" bindready="ready"></fui-autograph>
+    <view class="fui-btn__box">
+      <fui-button type="gray" width="400rpx" height="84rpx" text="重签" bold margin="64rpx 0 24rpx" bindclick="redraw">
+      </fui-button>
+      <fui-button type="gray" width="400rpx" height="84rpx" text="完成" bold bindclick="complete">
+      </fui-button>
+    </view>
+    <view class="fui-autograph__box">
+      <text class="fui-text">您的签名：</text>
+      <image src="{{src}}" wx:if="{{src}}" mode="widthFix" class="fui-img" bindtap="preview"></image>
+    </view>
+  </view>
+</view>

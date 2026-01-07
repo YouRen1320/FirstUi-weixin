@@ -1,0 +1,14 @@
+<view class="fui-wrap">
+		<fui-vtabs vtabs="{{vtabs}}" activeTab="{{activeTab}}"  id="vtabs" bindclick="onTabClick" bindchange="onChange">
+			<!--注意：联动时，tabIndex属性为必传参数-->
+			<fui-vtabs-content wx:for="{{vtabs}}" wx:key="index" tabIndex="{{index}}">
+				<view class="fui-vtabs-content__item" style="padding-bottom:{{vtabs.length-1===index?'800px':'0'}}">
+					<view class="fui-content--box">
+						<text class="fui-title">{{item.title || item.name}}</text>
+						<image class="fui-img" src="{{resUrl+item.img}}" mode="widthFix"></image>
+						<text class="fui-descr">{{item.descr}}</text>
+					</view>
+				</view>
+			</fui-vtabs-content>
+		</fui-vtabs>
+	</view>

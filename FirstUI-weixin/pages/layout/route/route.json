@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "运单轨迹-路线规划",
+  "navigationStyle": "custom",
+	"disableScroll": true,
+  "usingComponents": {
+    "fui-text":"/components/firstui/fui-text/fui-text",
+    "fui-list":"/components/firstui/fui-list/fui-list",
+    "fui-lazyload":"/components/firstui/fui-lazyload/fui-lazyload"
+  }
+}

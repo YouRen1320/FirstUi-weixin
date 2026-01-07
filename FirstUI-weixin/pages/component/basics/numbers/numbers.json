@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "数字",
+  "usingComponents": {
+    "fui-number":"/components/firstui/fui-number/fui-number"
+  }
+}

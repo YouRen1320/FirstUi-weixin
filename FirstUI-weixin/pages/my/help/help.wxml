@@ -1,0 +1,68 @@
+<view class="fui-wrap">
+  <view class="fui-header">
+    <image src="{{resUrl}}/help/light/img_banner_3x.png" class="fui-banner" mode="widthFix"></image>
+    <view class="fui-hd__content">
+      <view class="fui-hd__title">Hi,很高兴为您服务</view>
+      <view class="fui-hd__sub">已为您定制如下内容</view>
+    </view>
+  </view>
+  <view class="fui-page__bd">
+    <view class="fui-main__box">
+      <view class="fui-search__box fui-align__center" bindtap="search">
+        <image class="fui-search__icon" src="/static/images/help/light/icon_search_3x.png" mode="widthFix">
+        </image>
+        <text class="fui-search__text">请输入您遇到的问题</text>
+      </view>
+      <fui-list-cell bottomLeft="0" padding="32rpx 0" highlight="{{false}}">
+        <text class="fui-title">问题指南</text>
+      </fui-list-cell>
+      <view class="fui-menu__box">
+        <view class="fui-menu__item" bindtap="href" data-type="1">
+          <image src="/static/images/help/light/icon_introduction_3x.png"></image>
+          <text>新手入门</text>
+        </view>
+        <view class="fui-menu__item" bindtap="href" data-type="2">
+          <image src="/static/images/help/light/icon_introduce_3x.png"></image>
+          <text>功能介绍</text>
+        </view>
+        <view class="fui-menu__item" bindtap="href" data-type="3">
+          <image src="/static/images/help/light/icon_member_3x.png"></image>
+          <text>会员权益</text>
+        </view>
+      </view>
+    </view>
+    <view class="fui-title__box fui-align__center">
+      <image src="/static/images/help/light/icon_assembly_3x.png"></image>
+      <text>常见问题</text>
+    </view>
+    <fui-list-cell arrow bottomRight="32" wx:for="{{ques}}" wx:key="index" bindclick="detail" data-index="{{index}}"
+      data-title="{{item}}">
+      <text>{{item}}</text>
+    </fui-list-cell>
+    <view class="fui-title__box fui-align__center">
+      <image src="/static/images/help/light/icon_bug_3x.png"></image>
+      <text>常见BUG</text>
+    </view>
+    <view>
+      <fui-list-cell arrow bottomRight="32" wx:for="{{bugs}}" wx:key="idx" wx:for-index="idx" bindclick="detail" data-index="{{idx+5}}"
+        data-title="{{item}}">
+        <text>{{item}}</text>
+      </fui-list-cell>
+    </view>
+    <view class="fui-title__box fui-align__center">
+      <image src="/static/images/help/light/icon_member_relevant_3x.png"></image>
+      <text>会员相关</text>
+    </view>
+    <view>
+      <fui-list-cell arrow bottomRight="32" wx:for="{{members}}" wx:key="index" bindclick="detail"
+        data-index="{{index+9}}" data-title="{{item}}">
+        <text>{{item}}</text>
+      </fui-list-cell>
+    </view>
+    <view class="fui-footer fui-flex__center">
+      找不到答案？
+      <fui-button open-type="contact" width="144rpx" height="44rpx" type="link" color="#465CFF" size="{{24}}">
+        向我提问吧</fui-button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "瀑布流",
+	"enablePullDownRefresh": true,
+  "usingComponents": {
+    "fui-waterfall":"/components/firstui/fui-waterfall/fui-waterfall",
+    "fui-waterfall-item":"/components/firstui/fui-waterfall-item/fui-waterfall-item",
+    "fui-overflow-hidden":"/components/firstui/fui-overflow-hidden/fui-overflow-hidden",
+    "fui-text":"/components/firstui/fui-text/fui-text",
+    "fui-loadmore":"/components/firstui/fui-loadmore/fui-loadmore"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "标签选择",
+  "usingComponents": {
+    "fui-data-tag":"/components/firstui/fui-data-tag/fui-data-tag"
+  }
+}

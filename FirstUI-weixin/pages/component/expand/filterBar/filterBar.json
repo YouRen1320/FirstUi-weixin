@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "筛选栏",
+  "usingComponents": {
+    "fui-filter-bar":"/components/firstui/fui-filter-bar/fui-filter-bar",
+    "fui-drawer":"/components/firstui/fui-drawer/fui-drawer",
+    "fui-dropdown-menu":"/components/firstui/fui-dropdown-menu/fui-dropdown-menu"
+  }
+}

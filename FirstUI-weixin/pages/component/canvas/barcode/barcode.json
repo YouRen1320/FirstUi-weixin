@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "条形码",
+  "usingComponents": {
+    "fui-barcode": "/components/firstui/fui-barcode/fui-barcode",
+    "fui-input": "/components/firstui/fui-input/fui-input"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "回到顶部",
+  "usingComponents": {
+    "fui-backtop":"/components/firstui/fui-backtop/fui-backtop"
+  }
+}

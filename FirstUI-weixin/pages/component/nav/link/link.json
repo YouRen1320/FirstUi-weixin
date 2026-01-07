@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "超链接",
+  "usingComponents": {
+    "fui-link":"/components/firstui/fui-link/fui-link"
+  }
+}

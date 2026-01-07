@@ -1,0 +1,24 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title fui-align__center" bindtap="vip">SearchBar <image src="/static/images/index/light/icon_member_3x.png"></image>
+    </view>
+    <view class="fui-page__desc">SearchBar 搜索栏，主要用于内容搜索，跳转展示等。</view>
+  </view>
+  <view class="fui-page__bd">
+    <view class="fui-section__title">基本使用</view>
+    <fui-search-bar bindsearch="search"></fui-search-bar>
+    <view class="fui-section__title">调整样式</view>
+    <fui-search-bar background="#ededed" radius="36" searchColor="#FFB703" bindsearch="search"></fui-search-bar>
+    <view class="fui-section__title">插槽使用/返回箭头/不显示占位</view>
+			<fui-search-bar background="#fff" radius="36" inputBackground="#fafafa" bindsearch="search">
+				<view class="fui-arrow__left" catchtap="back">
+					<fui-icon name="arrowleft" size="56"></fui-icon>
+				</view>
+			</fui-search-bar>
+    <view class="fui-section__title">占位内容左对齐</view>
+    <fui-search-bar isLeft background="#111" color="#fff" inputBackground="#222" bindsearch="search">
+    </fui-search-bar>
+    <view class="fui-section__title">禁用状态，只做跳转</view>
+    <fui-search-bar disabled bindclick="onClick"></fui-search-bar>
+  </view>
+</view>

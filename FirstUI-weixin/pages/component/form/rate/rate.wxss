@@ -1,0 +1,6 @@
+page{
+  background: #fff;
+}
+.fui-wrap {
+  padding-bottom: 64rpx;
+}

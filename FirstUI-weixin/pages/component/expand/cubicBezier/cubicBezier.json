@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "贝塞尔曲线",
+  "usingComponents": {
+    "fui-cubic-bezier":"/components/firstui/fui-cubic-bezier/fui-cubic-bezier"
+  }
+}

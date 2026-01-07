@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "车牌号键盘",
+  "usingComponents": {
+    "fui-license-plate":"/components/firstui/fui-license-plate/fui-license-plate",
+    "fui-single-input":"/components/firstui/fui-single-input/fui-single-input"
+  }
+}

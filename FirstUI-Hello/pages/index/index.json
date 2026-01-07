@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "fui-button": "/components/firstui/fui-button/fui-button"
+  }
+}

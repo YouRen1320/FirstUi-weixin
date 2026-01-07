@@ -1,0 +1,32 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title fui-align__center" bindtap="vip">Calendar <image src="/static/images/index/light/icon_member_3x.png"></image>
+    </view>
+    <view class="fui-page__desc">Calendar 日历，用于选择日期区间。支持单选、多选、区间选择。</view>
+  </view>
+  <view class="fui-page__bd">
+    <view class="fui-section__title">单个日期选择/按年加载,滑动切换月份</view>
+    <fui-calendar bindchange="change"></fui-calendar>
+    <view class="fui-section__title">多个日期选择/显示农历</view>
+    <fui-calendar type="2" isMultiple="{{false}}" showLunar bindchange="change1"></fui-calendar>
+    <view class="fui-section__title">设置自定义描述/角标</view>
+    <fui-calendar badgeColor="#09BE4F" isMultiple="{{false}}" bindchange="change" bind:dateChange="dateChange" id="calendarRef"></fui-calendar>
+    <view class="fui-section__title">设置默认值/范围/仅展示不可选择</view>
+    <fui-calendar type="2" isMultiple="{{false}}" language="en" value="{{value}}" disabled minDate="2021-01-01" maxDate="2023-12-31">
+    </fui-calendar>
+    <view class="fui-section__title">区间选择/底部弹出选择</view>
+    <view class="fui-flex__center">
+      <fui-button type="gray" width="400rpx" height="84rpx" text="日期区间选择" bold margin="48rpx 0 0" bindclick="btnSelect"></fui-button>
+    </view>
+    <view class="fui-result">您的选择为：{{result}}</view>
+    <fui-bottom-popup show="{{show}}">
+      <view class="fui-scroll__wrap">
+        <view class="fui-calendar-title">请选择日期</view>
+        <fui-calendar type="3" isMultiple="{{false}}" showLunar showBtn bindchange="change2"></fui-calendar>
+        <view class="fui-icon__close" catchtap="closePopup">
+          <fui-icon name="close" size="{{48}}"></fui-icon>
+        </view>
+      </view>
+    </fui-bottom-popup>
+  </view>
+</view>

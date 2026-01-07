@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "评分",
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "fui-rate":"/components/firstui/fui-rate/fui-rate"
+  }
+}

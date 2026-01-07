@@ -1,0 +1,30 @@
+<view class="fui-wrap fui-page__bd">
+  <view class="fui-banner__box">
+    <image class="fui-banner" src="{{resUrl}}/my/light/img_banner_3x.png" mode="widthFix"></image>
+    <view class="fui-vip__box fui-page__spacing">
+      <view class="fui-mod__box">
+        <image class="fui-vip__bg" src="{{resUrl}}/my/light/img_mod_bg.png"></image>
+      </view>
+      <view class="fui-vip__btn fui-flex__center" bindtap="href" data-page="/pages/my/vip/vip">立即开通</view>
+    </view>
+  </view>
+  <view class="fui-page__spacing">
+    <view class="fui-menu__wrap fui-align__center">
+      <view class="fui-menu__item" wx:for="{{menus}}" wx:key="index" bindtap="href" data-page="{{item.page}}">
+        <button open-type="feedback" class="fui-btn__feedback" wx:if="{{index===2}}"></button>
+        <view class="fui-menu__img fui-flex__center" style="background:{{item.background}}">
+          <image src="{{resUrl}}/my/light/icon_{{item.src}}_3x.png" mode="widthFix"></image>
+        </view>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="fui-list__wrap">
+    <fui-list-cell bindclick="href" data-page="{{item.page}}" arrow bottomRight="32" wx:for="{{list}}" wx:key="index">
+      <view class="fui-align__center">
+        <image class="fui-list__icon" src="/static/images/my/light/icon_{{item.src}}_3x.png" mode="widthFix"></image>
+        <text class="fui-list__text" style="margin-right: -20rpx;">{{item.text}}</text>
+      </view>
+    </fui-list-cell>
+  </view>
+</view>

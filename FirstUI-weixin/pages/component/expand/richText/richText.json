@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "富文本解析",
+  "usingComponents": {
+    "fui-parse":"/components/firstui/fui-parse/fui-parse"
+  }
+}

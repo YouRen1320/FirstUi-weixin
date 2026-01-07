@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "横向滚动",
+  "usingComponents": {
+    "fui-overflow-hidden":"/components/firstui/fui-overflow-hidden/fui-overflow-hidden",
+    "fui-avatar":"/components/firstui/fui-avatar/fui-avatar",
+    "fui-text":"/components/firstui/fui-text/fui-text"
+  }
+}

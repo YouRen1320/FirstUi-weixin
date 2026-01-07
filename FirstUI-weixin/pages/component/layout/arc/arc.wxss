@@ -1,0 +1,9 @@
+.fui-wrap {
+  padding-bottom: 120rpx;
+}
+
+.fui-banner {
+  width: 750rpx;
+  height: 512rpx;
+  display: block;
+}

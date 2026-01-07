@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "加载动画",
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "fui-load-ani":"/components/firstui/fui-load-ani/fui-load-ani",
+    "fui-grid":"/components/firstui/fui-grid/fui-grid",
+    "fui-grid-item":"/components/firstui/fui-grid-item/fui-grid-item"
+  }
+}

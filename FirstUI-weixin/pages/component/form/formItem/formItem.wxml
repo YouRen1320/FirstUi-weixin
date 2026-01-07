@@ -1,0 +1,99 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title fui-align__center" bindtap="vip">FormItem<image src="/static/images/index/light/icon_member_3x.png"></image>
+    </view>
+    <view class="fui-page__desc">FormItem 表单项，主要用于表单组件相关布局使用，可结合fui-form组件做表单校验。</view>
+  </view>
+  <view class="fui-page__bd">
+    <fui-form id="form" show="{{false}}">
+      <view class="fui-section__title">基础使用</view>
+      <fui-form-item label="活动名称">
+        <fui-input borderBottom="{{false}}" padding="0" placeholder="请输入活动名称"></fui-input>
+      </fui-form-item>
+      <fui-form-item label="手机号码">
+        <fui-input borderBottom="{{false}}" padding="0" placeholder="请输入手机号码"></fui-input>
+      </fui-form-item>
+      <fui-form-item label="即时配送">
+        <fui-switch scaleRatio="0.9"></fui-switch>
+      </fui-form-item>
+      <fui-form-item label="活动性质">
+        <fui-checkbox-group>
+          <fui-label inline>
+            <fui-checkbox value="1"></fui-checkbox>
+            <fui-text size="28" text="地推活动" padding="0 30rpx 0 16rpx"></fui-text>
+          </fui-label>
+          <fui-label inline>
+            <fui-checkbox value="2"></fui-checkbox>
+            <fui-text size="28" text="美食活动" padding="0 16rpx"></fui-text>
+          </fui-label>
+        </fui-checkbox-group>
+      </fui-form-item>
+      <fui-form-item label="特殊资源">
+        <fui-radio-group>
+          <fui-label>
+            <fui-radio value="1"></fui-radio>
+            <fui-text size="28" text="线上品牌方赞助" padding="0 30rpx 0 16rpx"></fui-text>
+          </fui-label>
+          <fui-label margin="32rpx 0 0">
+            <fui-radio value="2"></fui-radio>
+            <fui-text size="28" text="线下场地免费" padding="0 16rpx"></fui-text>
+          </fui-label>
+        </fui-radio-group>
+      </fui-form-item>
+      <fui-form-item label="评分">
+        <fui-rate></fui-rate>
+      </fui-form-item>
+      <fui-form-item label="上传图片" padding="28rpx 32rpx 8rpx">
+        <fui-upload></fui-upload>
+      </fui-form-item>
+      <view class="fui-section__title">必填星号【提示居左对齐】</view>
+      <fui-form-item label="姓名" asterisk prop="name" error-align="left">
+        <fui-input borderBottom="{{false}}" padding="0" placeholder="请输入姓名" model:value="{{name}}"></fui-input>
+      </fui-form-item>
+      <fui-form-item label="手机号码" asterisk prop="mobile" error-align="left">
+        <fui-input borderBottom="{{false}}" padding="0" placeholder="请输入手机号码" model:value="{{mobile}}"></fui-input>
+      </fui-form-item>
+      <view class="fui-section__title">星号居右【提示居中对齐】</view>
+      <fui-form-item asterisk-position="right" label="身份证" asterisk prop="idCard">
+        <fui-input borderBottom="{{false}}" padding="0" placeholder="请输入身份证" model:value="{{idCard}}"></fui-input>
+      </fui-form-item>
+      <fui-form-item asterisk-position="right" label="电子邮箱" asterisk prop="email">
+        <fui-input borderBottom="{{false}}" padding="0" placeholder="请输入电子邮箱" model:value="{{email}}"></fui-input>
+      </fui-form-item>
+      <view class="fui-section__title">label右对齐【提示居右对齐】</view>
+      <fui-form-item label-align="right" asterisk-position="right" label="活动名称" asterisk prop="activityName" error-align="right">
+        <fui-input borderBottom="{{false}}" padding="0" placeholder="请输入活动名称" model:value="{{activityName}}"></fui-input>
+      </fui-form-item>
+      <fui-form-item label-align="right" asterisk-position="right" label="主办方" asterisk prop="organizer" error-align="right">
+        <fui-input borderBottom="{{false}}" padding="0" placeholder="请输入主办方" model:value="{{organizer}}"></fui-input>
+      </fui-form-item>
+      <view class="fui-section__title">选择</view>
+      <fui-form-item label="活动时间" arrow highlight>
+        <fui-input borderBottom="{{false}}" padding="0" placeholder="请选择时间" disabled backgroundColor="transparent"></fui-input>
+      </fui-form-item>
+      <fui-form-item label="地区" arrow highlight>
+        <fui-input borderBottom="{{false}}" padding="0" placeholder="请选择地区" disabled backgroundColor="transparent"></fui-input>
+      </fui-form-item>
+      <view class="fui-section__title">上下排列</view>
+      <fui-form-item asterisk label="详细描述" bottomBorder="{{false}}" prop="descr" error-align="left">
+        <fui-textarea slot="vertical" padding="0 32rpx 32rpx 32rpx" border-top="{{false}}" placeholder="请输入详细描述..." model:value="{{descr}}"></fui-textarea>
+      </fui-form-item>
+      <view class="fui-section__title">其他</view>
+      <fui-form-item label="是否推送">
+        <fui-switch slot="right"></fui-switch>
+      </fui-form-item>
+      <fui-form-item label="体重">
+        <fui-input type="digit" borderBottom="{{false}}" padding="0 16rpx" placeholder="请输入体重" text-align="right">
+        </fui-input>
+        <fui-text text="kg" slot="right"></fui-text>
+      </fui-form-item>
+      <fui-form-item label="验证码">
+        <input class="fui-page__input" placeholder="请输入验证码" placeholder-style="color:#ccc;" maxlength="6" />
+        <fui-button slot="right" type="gray" bold width="200rpx" height="64rpx" size="28" text="获取验证码"></fui-button>
+      </fui-form-item>
+      <view class="fui-btn__box">
+        <fui-button text="Submit" bold bindclick="submit"></fui-button>
+      </view>
+    </fui-form>
+  </view>
+</view>

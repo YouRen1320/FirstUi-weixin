@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+	"navigationBarTitleText": "背景图",
+  "usingComponents": {
+    "fui-status-bar":"/components/firstui/fui-status-bar/fui-status-bar",
+    "fui-background-image":"/components/firstui/fui-background-image/fui-background-image"
+  }
+}

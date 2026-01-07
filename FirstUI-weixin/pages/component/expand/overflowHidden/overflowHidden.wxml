@@ -1,0 +1,33 @@
+<view class="fui-wrap">
+		<view class="fui-page__hd">
+			<view class="fui-page__title fui-align__center" bindtap="vip">OverflowHidden <image
+					src="/static/images/index/light/icon_member_3x.png"></image>
+			</view>
+			<view class="fui-page__desc">OverflowHidden 内容超出隐藏，主要用于文本内容超出隐藏功能。</view>
+		</view>
+		<view class="fui-page__bd">
+			<view class="fui-section__title">显示一行</view>
+			<view class="fui-oh__wrap">
+				<fui-overflow-hidden text="{{text}}"></fui-overflow-hidden>
+			</view>
+			<view class="fui-section__title">显示两行</view>
+			<view class="fui-oh__wrap">
+				<fui-overflow-hidden text="{{text}}" rows="{{isHidden?2:1000}}">
+					<view class="fui-btn__text {{isHidden?'':'fui-visible'}}"  bindtap="change">{{isHidden?'展开':'收起'}}
+					</view>
+				</fui-overflow-hidden>
+			</view>
+			<view class="fui-section__title">调整样式，显示三行</view>
+			<view class="fui-oh__wrap">
+				<fui-overflow-hidden text="{{text}}" size="{{28}}" color="#FFB703" rows="{{3}}"></fui-overflow-hidden>
+			</view>
+			<view class="fui-section__title">渐变隐藏</view>
+			<view class="fui-oh__wrap">
+        <fui-overflow-hidden text="{{text2}}" size="{{28}}" color="#FF2B2B" type="2" gradientColor="#FFFFFF"
+					height="200rpx" visible="{{visible}}"></fui-overflow-hidden>
+				<fui-button type="gray" width="400rpx" height="84rpx" text="{{btnText}}" bold margin="48rpx auto"
+					bindclick="readMore">
+				</fui-button>
+			</view>
+		</view>
+	</view>

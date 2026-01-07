@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "内容超出隐藏",
+  "usingComponents": {
+    "fui-overflow-hidden":"/components/firstui/fui-overflow-hidden/fui-overflow-hidden"
+  }
+}

@@ -1,0 +1,12 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title fui-align__center" bindtap="vip">Gallery <image src="/static/images/index/light/icon_member_3x.png"></image>
+    </view>
+    <view class="fui-page__desc">Gallery 画廊，用于预览图片或其他操作。</view>
+  </view>
+  <view class="fui-page__bd">
+    <fui-button type="gray" width="400rpx" height="84rpx" text="自定义Gallery" bold margin="24rpx 0" bindclick="showGallery"></fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="原生预览" bold bindclick="previewImage"></fui-button>
+  </view>
+  <fui-gallery urls="{{urls}}" show="{{show}}" bindhide="hideGallery"></fui-gallery>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "日历",
+  "usingComponents": {
+    "fui-calendar": "/components/firstui/fui-calendar/fui-calendar",
+    "fui-bottom-popup": "/components/firstui/fui-bottom-popup/fui-bottom-popup"
+  }
+}

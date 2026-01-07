@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "动画",
+  "usingComponents": {
+    "fui-lottie":"/components/firstui/fui-lottie/fui-lottie"
+  }
+}

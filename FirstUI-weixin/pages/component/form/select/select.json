@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择器",
+  "usingComponents": {
+    "fui-select":"/components/firstui/fui-select/fui-select"
+  }
+}

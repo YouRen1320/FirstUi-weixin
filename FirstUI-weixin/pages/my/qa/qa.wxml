@@ -1,0 +1,11 @@
+<view class="fui-wrap">
+  <fui-list-cell bottom-right="32" highlight="{{false}}">
+    <text class="fui-title">{{title}}</text>
+  </fui-list-cell>
+  <view class="fui-content">
+    <view class="fui-p" wx:for="{{answers}}" wx:key="index">
+      <text class="fui-sign" wx:if="{{answers.length>1}}">-</text>
+      <text>{{item}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "表单预览",
+  "usingComponents": {
+    "fui-preview": "/components/firstui/fui-preview/fui-preview"
+  }
+}

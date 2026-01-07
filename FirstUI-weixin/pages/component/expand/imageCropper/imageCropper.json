@@ -1,0 +1,9 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#303132",
+  "navigationBarTitleText": "图片裁剪",
+  "disableScroll": true,
+  "usingComponents": {
+    "fui-image-cropper":"/components/firstui/fui-image-cropper/fui-image-cropper"
+  }
+}

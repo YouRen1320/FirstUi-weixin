@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "拖拽排序",
+  "usingComponents": {
+    "f-drag-item": "./f-drag-item/f-drag-item",
+    "fui-drag": "/components/firstui/fui-drag/fui-drag"
+  }
+}

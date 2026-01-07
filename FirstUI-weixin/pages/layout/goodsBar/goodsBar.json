@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "商品导航栏",
+  "usingComponents": {
+    "fui-safe-area":"/components/firstui/fui-safe-area/fui-safe-area",
+    "fui-badge":"/components/firstui/fui-badge/fui-badge"
+  }
+}

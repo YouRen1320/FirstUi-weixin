@@ -1,0 +1,30 @@
+<view class="fui-wrap">
+		<fui-waterfall id="waterfall" left-gap="20" right-gap="20" column-gap="16" top-gap="16" bindend="onEnd">
+			<fui-waterfall-item wx:for="{{goodsList}}" wx:key="index" src="{{item.src}}" bindclick="handleClick" data-index="{{index}}">
+				<view class="fui-goods__item-content fui-card__padding">
+					<view>
+						<fui-overflow-hidden rows="{{2}}" size="28" text="{{item.title}}">
+						</fui-overflow-hidden>
+					</view>
+					<view class="fui-goods__item-price">
+						<fui-text font-weight="500" text="￥" size="22" color="#FF2B2B"></fui-text>
+						<fui-text font-weight="500" lineHeight text="{{parse.getPrice(item.price,1)}}" size="34"
+							color="#FF2B2B"></fui-text>
+						<fui-text font-weight="500" text="{{parse.getPrice(item.price,2)}}" size="24" color="#FF2B2B">
+						</fui-text>
+					</view>
+				</view>
+			</fui-waterfall-item>
+		</fui-waterfall>
+		<fui-loadmore activeColor="#7F7F7F" wx:if="{{!isEnd || loading}}"></fui-loadmore>
+	</view>
+
+  <wxs module="parse">
+     module.exports = {
+      getPrice: function (price, type) {
+         if (!price) return ''
+				 var arr = price.split('.')
+         return type === 1 ? arr[0] : '.' + arr[1]
+        }
+    }
+  </wxs>

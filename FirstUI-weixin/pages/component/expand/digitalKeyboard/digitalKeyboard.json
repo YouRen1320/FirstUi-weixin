@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "数字键盘",
+  "usingComponents": {
+    "fui-digital-keyboard": "/components/firstui/fui-digital-keyboard/fui-digital-keyboard",
+    "fui-single-input":"/components/firstui/fui-single-input/fui-single-input"
+  }
+}

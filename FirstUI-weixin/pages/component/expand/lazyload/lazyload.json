@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "图片懒加载",
+  "usingComponents": {
+    "fui-lazyload":"/components/firstui/fui-lazyload/fui-lazyload"
+  }
+}

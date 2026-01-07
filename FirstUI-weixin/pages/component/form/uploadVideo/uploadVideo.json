@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "视频上传",
+  "usingComponents": {
+    "fui-upload-video":"/components/firstui/fui-upload-video/fui-upload-video"
+  }
+}

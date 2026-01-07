@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "倒计时",
+  "usingComponents": {
+    "fui-count-down": "/components/firstui/fui-count-down/fui-count-down",
+    "fui-grid":"/components/firstui/fui-grid/fui-grid",
+    "fui-grid-item":"/components/firstui/fui-grid-item/fui-grid-item"
+  }
+}

@@ -1,0 +1,46 @@
+<view class="fui-wrap">
+    <view class="fui-page__hd">
+			<view class="fui-page__title fui-align__center" bindtap="vip">RollNews <image
+					src="/static/images/index/light/icon_member_3x.png"></image>
+			</view>
+			<view class="fui-page__desc">滚动消息，常用的页面布局，可提升开发效率以及带来舒服的视觉效果！</view>
+		</view>
+		<view class="fui-page__bd fui-page__spacing">
+			<view class="fui-section__title">搜索栏</view>
+			<!-- 布局内容 start -->
+			<view class="fui-roll__news">
+				<fui-icon name="search" size="{{36}}"></fui-icon>
+				<swiper vertical autoplay circular interval="3000" class="fui-rn__swiper">
+					<swiper-item wx:for="{{searchList}}" wx:key="index" class="fui-rn__item">
+						<text class="fui-rn__news-text">{{item}}</text>
+					</swiper-item>
+				</swiper>
+			</view>
+
+			<view class="fui-section__title">搜索栏</view>
+			<view class="fui-roll__news fui-rn__circle">
+				<fui-icon name="search" size="{{36}}" color="#fff"></fui-icon>
+				<swiper vertical autoplay circular interval="3000" class="fui-rn__swiper">
+					<swiper-item wx:for="{{searchList}}" wx:key="index" class="fui-rn__item">
+						<text class="fui-rn__news-text fui-rn__color-white">{{item}}</text>
+					</swiper-item>
+				</swiper>
+				<fui-icon name="scan" size="{{44}}" color="#fff"></fui-icon>
+			</view>
+
+			<view class="fui-section__title">消息栏</view>
+			<view class="fui-roll__news">
+				<fui-icon name="notice" size="{{36}}" color="#FFB703"></fui-icon>
+				<swiper vertical autoplay circular interval="3000" class="fui-rn__swiper">
+					<swiper-item wx:for="{{searchList}}" wx:key="index" class="fui-rn__item">
+						<text class="fui-rn__news-text">{{item}}</text>
+					</swiper-item>
+				</swiper>
+			</view>
+			<!-- 布局内容 end -->
+		</view>
+		<view class="fui-btn__box">
+			<fui-button type="gray" width="400rpx" height="84rpx" text="More" bold margin="24rpx" bindclick="href">
+			</fui-button>
+		</view>
+	</view>

@@ -1,0 +1,27 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title fui-align__center" bindtap="vip">Upload <image src="/static/images/index/light/icon_member_3x.png"></image>
+    </view>
+    <view class="fui-page__desc">Upload 图片上传，用于选择或拍照进行上传图片。</view>
+  </view>
+  <view class="fui-page__bd fui-page__spacing">
+    <view class="fui-section__title">自动上传</view>
+    <fui-upload immediate url="{{url}}" id="upload" bindsuccess="success" binderror="error" bindcomplete="complete" bindpreview="preview">
+    </fui-upload>
+    <view class="fui-section__title">手动上传</view>
+    <view class="fui-btn__box">
+      <fui-button type="gray" width="400rpx" height="84rpx" text="开始上传" bold bindclick="startUpload">
+      </fui-button>
+    </view>
+    <fui-upload background="#333" addColor="#d1d1d1" fileList="{{fileList}}" url="{{url}}" id="upload2" bindsuccess="success2" binderror="error2" bindcomplete="complete2" bindpreview="preview">
+    </fui-upload>
+    	<view class="fui-section__title">传入文件上传函数，返回一个promise</view>
+
+			<fui-upload max="{{3}}" call-upload border-color="#FFB703" border-sytle="dashed" id="uploader" bindreupload="reUpload" bindcomplete="complete3" bindpreview="preview">
+			</fui-upload>
+			<view class="fui-btn__box">
+				<fui-button margin="48rpx 0" type="gray" btn-size="medium" text="调用upload方法上传" bold bindclick="callUpload">
+				</fui-button>
+			</view>
+  </view>
+</view>

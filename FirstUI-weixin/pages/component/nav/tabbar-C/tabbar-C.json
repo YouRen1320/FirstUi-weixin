@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "组件",
+  "usingComponents": {
+    "fui-tabbar": "/components/firstui/fui-tabbar/fui-tabbar",
+    "page-a": "./pageA/pageA",
+    "page-b": "./pageB/pageB",
+    "page-c": "./pageC/pageC",
+    "page-d": "./pageD/pageD"
+  }
+}

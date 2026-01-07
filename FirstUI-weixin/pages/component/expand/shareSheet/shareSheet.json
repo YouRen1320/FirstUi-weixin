@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "分享面板",
+  "usingComponents": {
+    "fui-share-sheet": "/components/firstui/fui-share-sheet/fui-share-sheet"
+  }
+}

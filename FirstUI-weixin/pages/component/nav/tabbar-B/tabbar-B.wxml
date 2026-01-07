@@ -1,0 +1,12 @@
+<view class="fui-wrap">
+  <swiper class="fui-swiper__wrap" current="{{current}}" duration="{{300}}" bindchange="change">
+    <swiper-item class="fui-swiper__item" wx:for="{{tabBar}}" wx:for-item="tab" wx:key="index">
+      <scroll-view scroll-y class="fui-scroll__wrap">
+        <view class="fui-text">{{texts[index]}}</view>
+        <view class="fui-tabbar__h" style="height:{{height}}px"> </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+  <fui-tabbar tabBar="{{tabBar}}" current="{{current}}" bindinit="init" bindclick="itemClick"></fui-tabbar>
+</view>

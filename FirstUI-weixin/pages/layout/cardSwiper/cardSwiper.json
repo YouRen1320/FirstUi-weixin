@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "卡片轮播",
+  "usingComponents": {
+    "fui-swiper-dot":"/components/firstui/fui-swiper-dot/fui-swiper-dot"
+  }
+}

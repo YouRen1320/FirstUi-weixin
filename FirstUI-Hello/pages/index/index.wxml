@@ -1,0 +1,5 @@
+<view class="fui-wrap">
+  <view class="fui-text">Hello FirstUI ！</view>
+
+  <fui-button text="按钮" bindclick="btn"></fui-button>
+</view>

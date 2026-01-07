@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "组件",
+  "usingComponents": {
+    "fui-tabbar":"/components/firstui/fui-tabbar/fui-tabbar"
+  }
+}

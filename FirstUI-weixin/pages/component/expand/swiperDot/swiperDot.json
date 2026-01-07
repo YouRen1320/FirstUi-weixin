@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "轮播图指示点",
+  "usingComponents": {
+    "fui-swiper-dot": "/components/firstui/fui-swiper-dot/fui-swiper-dot"
+  }
+}

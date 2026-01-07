@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "步骤条",
+  "usingComponents": {
+    "fui-steps": "/components/firstui/fui-steps/fui-steps"
+  }
+}

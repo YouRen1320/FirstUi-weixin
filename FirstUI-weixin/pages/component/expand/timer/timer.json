@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "计时器",
+  "usingComponents": {
+    "fui-timer": "/components/firstui/fui-timer/fui-timer",
+    "fui-grid": "/components/firstui/fui-grid/fui-grid",
+    "fui-grid-item": "/components/firstui/fui-grid-item/fui-grid-item"
+  }
+}

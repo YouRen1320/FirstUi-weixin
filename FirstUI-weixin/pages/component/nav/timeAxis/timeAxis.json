@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "时间轴",
+  "usingComponents": {
+    "fui-timeaxis": "/components/firstui/fui-timeaxis/fui-timeaxis",
+    "fui-timeaxis-node": "/components/firstui/fui-timeaxis-node/fui-timeaxis-node"
+  }
+}

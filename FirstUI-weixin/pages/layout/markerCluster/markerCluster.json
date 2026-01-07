@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "地图示例",
+  "enablePullDownRefresh": false,
+  "backgroundColor": "#FFFFFE",
+  "disableScroll": true,
+  "usingComponents": {
+    "fui-empty":"/components/firstui/fui-empty/fui-empty"
+  }
+}

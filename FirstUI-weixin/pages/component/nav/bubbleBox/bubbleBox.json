@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "气泡框",
+  "usingComponents": {
+    "fui-bubble-box": "/components/firstui/fui-bubble-box/fui-bubble-box"
+  }
+}

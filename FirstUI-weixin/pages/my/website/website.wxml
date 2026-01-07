@@ -1,0 +1,14 @@
+<view class="fui-wrap">
+  <view class="fui-banner__box">
+    <image src="{{resUrl}}/website/light/img_banner_3x.png" class="fui-banner" mode="widthFix"></image>
+  </view>
+  <view class="fui-list__view">
+    <fui-list-cell arrow padding="0 32rpx" bottomBorder="{{false}}" radius="16rpx" marginTop="24"
+      wx:for="{{links}}" wx:key="index" index="{{index}}" bindclick="getLink">
+      <view class="fui-list__item fui-align__center">
+        <image class="fui-item__icon" src="/static/images/website/light/icon_{{item.img}}_3x.png"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </fui-list-cell>
+  </view>
+</view>

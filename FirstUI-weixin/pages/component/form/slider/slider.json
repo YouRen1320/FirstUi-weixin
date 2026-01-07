@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "滑块",
+  "usingComponents": {
+    "fui-slider":"/components/firstui/fui-slider/fui-slider"
+  }
+}

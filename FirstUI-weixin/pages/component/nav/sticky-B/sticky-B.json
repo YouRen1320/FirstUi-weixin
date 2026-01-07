@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "吸顶容器",
+  "usingComponents": {
+    "fui-sticky":"/components/firstui/fui-sticky/fui-sticky"
+  }
+}

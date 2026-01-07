@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "表单项",
+  "usingComponents": {
+    "fui-form":"/components/firstui/fui-form/fui-form",
+    "fui-form-item":"/components/firstui/fui-form-item/fui-form-item",
+    "fui-input":"/components/firstui/fui-input/fui-input",
+    "fui-switch":"/components/firstui/fui-switch/fui-switch",
+    "fui-checkbox-group":"/components/firstui/fui-checkbox-group/fui-checkbox-group",
+    "fui-label":"/components/firstui/fui-label/fui-label",
+    "fui-checkbox":"/components/firstui/fui-checkbox/fui-checkbox",
+    "fui-text":"/components/firstui/fui-text/fui-text",
+    "fui-radio-group":"/components/firstui/fui-radio-group/fui-radio-group",
+    "fui-radio":"/components/firstui/fui-radio/fui-radio",
+    "fui-upload":"/components/firstui/fui-upload/fui-upload",
+    "fui-rate":"/components/firstui/fui-rate/fui-rate",
+    "fui-textarea":"/components/firstui/fui-textarea/fui-textarea"
+  }
+}

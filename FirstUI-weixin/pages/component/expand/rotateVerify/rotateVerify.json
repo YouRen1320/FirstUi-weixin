@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "旋转验证",
+  "usingComponents": {
+    "fui-rotate-verify":"/components/firstui/fui-rotate-verify/fui-rotate-verify"
+  }
+}

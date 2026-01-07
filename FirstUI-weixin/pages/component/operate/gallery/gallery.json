@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "画廊",
+  "usingComponents": {
+    "fui-gallery": "/components/firstui/fui-gallery/fui-gallery"
+  }
+}

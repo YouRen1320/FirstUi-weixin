@@ -1,0 +1,25 @@
+<view class="fui-wrap">
+		<view class="fui-page__hd">
+			<view class="fui-page__title">Lottie</view>
+			<view class="fui-page__desc">Lottie 动画，通过读取json文件信息实现动画效果。</view>
+		</view>
+		<view class="fui-page__bd fui-page__spacing">
+			<view class="fui-section__title">本地json数据</view>
+			<view class="fui-flex__center">
+				<fui-lottie options="{{options}}"></fui-lottie>
+			</view>
+			<view class="fui-section__title">网络地址</view>
+			<view class="fui-flex__center">
+				<fui-lottie options="{{option}}" action="{{action}}"></fui-lottie>
+			</view>
+
+			<view class="fui-flex__center fui-flex__column">
+				<fui-button type="gray" width="400rpx" height="84rpx" text="暂停播放" bold margin="24rpx 0" bindclick="ani" data-action="pause"></fui-button>
+				<fui-button type="gray" width="400rpx" height="84rpx" text="开始播放" bold bindclick="ani" data-action="play">
+				</fui-button>
+				<fui-button type="gray" width="400rpx" height="84rpx" text="停止播放" bold margin="24rpx 0" bindclick="ani" data-action="stop">
+				</fui-button>
+			</view>
+
+		</view>
+	</view>

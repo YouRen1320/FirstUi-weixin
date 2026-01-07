@@ -1,0 +1,15 @@
+<view class="fui-wrap">
+		<fui-vtabs vtabs="{{vtabs}}" activeTab="{{activeTab}}" linkage="{{false}}" bindclick="onTabClick">
+			<view class="fui-vtabs-content__item">
+				<view class="fui-content--box">
+					<text class="fui-title">{{content.title}}</text>
+					<image class="fui-img" src="{{content.img}}" mode="widthFix"></image>
+					<view wx:if="{{content.title==='FAQ'}}">
+						<image class="fui-img" src="{{item.img}}" mode="widthFix" wx:for="{{contents}}"
+							wx:key="index"></image>
+					</view>
+					<text class="fui-descr">{{content.descr}}</text>
+				</view>
+			</view>
+		</fui-vtabs>
+	</view>

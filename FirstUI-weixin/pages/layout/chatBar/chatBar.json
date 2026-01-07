@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "聊天栏",
+  "usingComponents": {
+    "fui-safe-area":"/components/firstui/fui-safe-area/fui-safe-area"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我要合作",
+  "enablePullDownRefresh": false,
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "fui-animation":"/components/firstui/fui-animation/fui-animation"
+  }
+}

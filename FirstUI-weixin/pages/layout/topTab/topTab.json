@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "顶部选项卡",
+  "enablePullDownRefresh": false,
+  "disableScroll": true,
+  "usingComponents": {
+    "f-news-item":"./fNewsItem/fNewsItem",
+    "fui-loadmore":"/components/firstui/fui-loadmore/fui-loadmore",
+    "fui-divider":"/components/firstui/fui-divider/fui-divider",
+    "fui-tabs":"/components/firstui/fui-tabs/fui-tabs"
+  }
+}

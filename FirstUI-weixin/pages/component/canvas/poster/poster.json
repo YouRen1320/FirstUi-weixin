@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "分享海报",
+  "usingComponents": {
+    "fui-poster": "/components/firstui/fui-poster/fui-poster"
+  }
+}

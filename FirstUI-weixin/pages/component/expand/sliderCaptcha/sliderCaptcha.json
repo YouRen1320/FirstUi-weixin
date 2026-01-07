@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "滑块拼图验证",
+  "usingComponents": {
+    "fui-slider-captcha": "/components/firstui/fui-slider-captcha/fui-slider-captcha"
+  }
+}

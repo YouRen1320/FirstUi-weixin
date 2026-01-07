@@ -1,0 +1,209 @@
+<view class="fui-wrap">
+		<view class="fui-page__hd">
+			<view class="fui-page__title fui-align__center" bindtap="vip">Sticky <image
+					src="/static/images/index/light/icon_member_3x.png"></image>
+			</view>
+			<view class="fui-page__desc">Sticky 吸顶容器，用于将标题栏在滚动时固定到页面顶部。</view>
+		</view>
+		<view class="fui-page__bd">
+			<fui-sticky range>
+				<view class="fui-title">小鸡 🐤</view>
+				<view slot="content">
+					<fui-list-cell>你看哪里有个小鸡呦</fui-list-cell>
+					<fui-list-cell>你看哪里有个小鸡呦</fui-list-cell>
+					<fui-list-cell>你看那里他有小鸡哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+			<fui-sticky range>
+				<view class="fui-title">母鸡 🐔</view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有母鸡哟</fui-list-cell>
+					<fui-list-cell>你看那里又有母鸡哟</fui-list-cell>
+					<fui-list-cell>母鸡咯咯咯咯咯咯-go-</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+
+			<fui-sticky range>
+				<view class="fui-title">公鸡 🐓</view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有公鸡哟</fui-list-cell>
+					<fui-list-cell>你看那里又有公鸡哟</fui-list-cell>
+					<fui-list-cell>公鸡喔喔喔喔喔-wo-</fui-list-cell>
+					<fui-list-cell>母鸡咯咯咯咯咯咯-go-</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+
+			<fui-sticky range>
+				<view class="fui-title">火鸡 🦃 </view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有火鸡哟</fui-list-cell>
+					<fui-list-cell>你看那里又有火鸡哟</fui-list-cell>
+					<fui-list-cell>火鸡嘟嘟嘟嘟嘟-du-</fui-list-cell>
+					<fui-list-cell>公鸡喔喔喔喔喔-wo-</fui-list-cell>
+					<fui-list-cell>母鸡咯咯咯咯咯咯-go-</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+
+			<fui-sticky range>
+				<view class="fui-title">鸽子 🕊 </view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有鸽子哟</fui-list-cell>
+					<fui-list-cell>你看那里又有鸽子哟</fui-list-cell>
+					<fui-list-cell>鸽子图噜噜噜噜-lu-</fui-list-cell>
+					<fui-list-cell>火鸡嘟嘟嘟嘟嘟-du-</fui-list-cell>
+					<fui-list-cell>公鸡喔喔喔喔喔-wo-</fui-list-cell>
+					<fui-list-cell>母鸡咯咯咯咯咯咯-go-</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+
+			<fui-sticky range>
+				<view class="fui-title">猫咪 🐱 </view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有猫咪哟</fui-list-cell>
+					<fui-list-cell>你看那里又有猫咪哟</fui-list-cell>
+					<fui-list-cell>猫咪喵喵喵喵喵-miao-</fui-list-cell>
+					<fui-list-cell>鸽子图噜噜噜噜-lu-</fui-list-cell>
+					<fui-list-cell>火鸡嘟嘟嘟嘟嘟-du-</fui-list-cell>
+					<fui-list-cell>公鸡喔喔喔喔喔-wo-</fui-list-cell>
+					<fui-list-cell>母鸡咯咯咯咯咯咯-go-</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+
+			<fui-sticky range>
+				<view class="fui-title">小狗 🐶 </view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有小狗哟</fui-list-cell>
+					<fui-list-cell>你看那里又有小狗哟</fui-list-cell>
+					<fui-list-cell>小狗旺旺旺旺旺-wang-</fui-list-cell>
+					<fui-list-cell>猫咪喵喵喵喵喵-miao-</fui-list-cell>
+					<fui-list-cell>鸽子图噜噜噜噜-lu-</fui-list-cell>
+					<fui-list-cell>火鸡嘟嘟嘟嘟嘟-du-</fui-list-cell>
+					<fui-list-cell>公鸡喔喔喔喔喔-wo-</fui-list-cell>
+					<fui-list-cell>母鸡咯咯咯咯咯咯-go-</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+
+			<fui-sticky range>
+				<view class="fui-title">山羊 🐐 </view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有山羊哟</fui-list-cell>
+					<fui-list-cell>你看那里又有山羊哟</fui-list-cell>
+					<fui-list-cell>山羊咩-mie-</fui-list-cell>
+					<fui-list-cell>小狗旺旺旺旺旺-wang-</fui-list-cell>
+					<fui-list-cell>猫咪喵喵喵喵喵-miao-</fui-list-cell>
+					<fui-list-cell>鸽子图噜噜噜噜-lu-</fui-list-cell>
+					<fui-list-cell>火鸡嘟嘟嘟嘟嘟-du-</fui-list-cell>
+					<fui-list-cell>公鸡喔喔喔喔喔-wo-</fui-list-cell>
+					<fui-list-cell>母鸡咯咯咯咯咯咯-go-</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+
+			<fui-sticky range>
+				<view class="fui-title">绵羊 🐑 </view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有绵羊哟</fui-list-cell>
+					<fui-list-cell>你看那里又有绵羊哟</fui-list-cell>
+					<fui-list-cell>绵羊咇-bie</fui-list-cell>
+					<fui-list-cell>山羊咩-mie</fui-list-cell>
+					<fui-list-cell>小狗旺旺旺旺旺-wang-</fui-list-cell>
+					<fui-list-cell>猫咪喵喵喵喵喵-miao-</fui-list-cell>
+					<fui-list-cell>鸽子图噜噜噜噜-lu-</fui-list-cell>
+					<fui-list-cell>火鸡嘟嘟嘟嘟嘟-du-</fui-list-cell>
+					<fui-list-cell>公鸡喔喔喔喔喔-wo-</fui-list-cell>
+					<fui-list-cell>母鸡咯咯咯咯咯咯-go-</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+
+			<fui-sticky range>
+				<view class="fui-title">母牛 🐮 </view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有母牛哟</fui-list-cell>
+					<fui-list-cell>你看那里又有母牛哟</fui-list-cell>
+					<fui-list-cell>母牛萌-meng-</fui-list-cell>
+					<fui-list-cell>绵羊咇-bie</fui-list-cell>
+					<fui-list-cell>山羊咩-mie</fui-list-cell>
+					<fui-list-cell>小狗旺旺旺旺旺-wang-</fui-list-cell>
+					<fui-list-cell>猫咪喵喵喵喵喵-miao-</fui-list-cell>
+					<fui-list-cell>鸽子图噜噜噜噜-lu-</fui-list-cell>
+					<fui-list-cell>火鸡嘟嘟嘟嘟嘟-du-</fui-list-cell>
+					<fui-list-cell>公鸡喔喔喔喔喔-wo-</fui-list-cell>
+					<fui-list-cell>母鸡咯咯咯咯咯咯-go-</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+
+			<fui-sticky range>
+				<view class="fui-title">公牛 🐂 </view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有公牛哟</fui-list-cell>
+					<fui-list-cell>你看那里又有公牛哟</fui-list-cell>
+					<fui-list-cell>公牛呣-mu-</fui-list-cell>
+					<fui-list-cell>母牛萌-meng-</fui-list-cell>
+					<fui-list-cell>绵羊咇-bie</fui-list-cell>
+					<fui-list-cell>山羊咩-mie</fui-list-cell>
+					<fui-list-cell>小狗旺旺旺旺旺-wang-</fui-list-cell>
+					<fui-list-cell>猫咪喵喵喵喵喵-miao-</fui-list-cell>
+					<fui-list-cell>鸽子图噜噜噜噜-lu-</fui-list-cell>
+					<fui-list-cell>火鸡嘟嘟嘟嘟嘟-du-</fui-list-cell>
+					<fui-list-cell>公鸡喔喔喔喔喔-wo-</fui-list-cell>
+					<fui-list-cell>母鸡咯咯咯咯咯咯-go-</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+					<fui-list-cell>小鸡哔哔哔哔-bi-哟</fui-list-cell>
+				</view>
+			</fui-sticky>
+
+			<fui-sticky range>
+				<view class="fui-title">拖拉机 🚜 </view>
+				<view slot="content">
+					<fui-list-cell>你看那里又有拖拉机哟</fui-list-cell>
+					<fui-list-cell>你看那里又有拖拉机哟</fui-list-cell>
+					<fui-list-cell>拖拉机嗡-weng-</fui-list-cell>
+					<fui-list-cell>拖拉机嗡-weng-</fui-list-cell>
+					<fui-list-cell>拖拉机嗡-weng-</fui-list-cell>
+					<fui-list-cell>小鸡被撞 喔 啊喔</fui-list-cell>
+				</view>
+			</fui-sticky>
+		</view>
+	</view>

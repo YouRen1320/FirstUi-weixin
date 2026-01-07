@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "骨架屏",
+  "usingComponents": {
+    "fui-skeleton":"/components/firstui/fui-skeleton/fui-skeleton"
+  }
+}

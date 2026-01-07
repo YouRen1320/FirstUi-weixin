@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "压屏窗",
+  "usingComponents": {
+    "fui-landscape": "/components/firstui/fui-landscape/fui-landscape"
+  }
+}

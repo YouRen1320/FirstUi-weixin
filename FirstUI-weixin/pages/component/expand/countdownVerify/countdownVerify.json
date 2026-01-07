@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "验证码倒计时",
+  "usingComponents": {
+    "fui-countdown-verify":"/components/firstui/fui-countdown-verify/fui-countdown-verify"
+  }
+}

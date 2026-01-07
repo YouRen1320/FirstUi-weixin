@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "消息提示",
+  "usingComponents": {
+    "fui-message": "/components/firstui/fui-message/fui-message"
+  }
+}

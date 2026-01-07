@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "长按复制",
+  "usingComponents": {
+    "fui-copy-text": "/components/firstui/fui-copy-text/fui-copy-text"
+  }
+}

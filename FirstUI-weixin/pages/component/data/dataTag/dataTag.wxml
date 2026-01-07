@@ -1,0 +1,28 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title fui-align__center fui-rect" bindtap="vip">DataTag <image src="/static/images/index/light/icon_member_3x.png"></image>
+    </view>
+    <view class="fui-page__desc fui-rect">DataTag 标签选择，通过数据驱动的单选标签和复选标签。</view>
+  </view>
+  <view class="fui-page__bd fui-page__spacing">
+    <view class="fui-section__title">单选标签</view>
+    <fui-data-tag options="{{options}}" bindchange="change"></fui-data-tag>
+    <view class="fui-section__title">单选标签/设置默认值/背景/边框</view>
+    <fui-data-tag defaultBorderColor="#FBDA41" background="#F1F4FA" activeBgColor="#FEDF48" border-color="#FBDA41" active-color="#333" radius="20" value="{{defVal}}" options="{{options}}" bindchange="change"></fui-data-tag>
+    <view class="fui-section__title">复选标签/带角标</view>
+    <fui-data-tag multiple mark options="{{options}}" bindchange="change2"></fui-data-tag>
+    <view class="fui-section__title">复选标签/设置默认值</view>
+    <fui-data-tag multiple mark options="{{options}}" value="{{chkDefVal}}" bindchange="change2">
+    </fui-data-tag>
+    <view class="fui-section__title">单选标签/model:value/可全部取消</view>
+    <fui-data-tag min="{{0}}" options="{{options}}" model:value="{{val}}"></fui-data-tag>
+    <view class="fui-section__title">多选标签/momodel:valuedel/max/圆角值</view>
+    <fui-data-tag multiple max="{{2}}" radius="{{40}}" activeBgColor="#F1F4FA" options="{{options}}" model:value="{{vals}}">
+    </fui-data-tag>
+    <view class="fui-section__title">单选标签/带角标/调整颜色/默认值</view>
+    <fui-data-tag options="{{options}}" model:value="{{val2}}" width="180" activeColor="#FFB703" borderColor="#FFB703" mark markColor="#FFB703"></fui-data-tag>
+    <view class="fui-section__title">复选标签/与全选标签互斥</view>
+    <fui-data-tag multiple mark options="{{options2}}" bindchange="change2">
+    </fui-data-tag>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="fui-wrap">
+  <view class="fui-banner__box">
+    <image src="{{resUrl}}/member/img_banner_3x.png" mode="widthFix" class="fui-banner__img"></image>
+  </view>
+  <view class="fui-page__bd fui-page__spacing">
+    <view class="fui-content__box">
+      <image :src="{{resUrl}}/member/img_mod_bg.png" class="fui-bg__img"></image>
+      <view class="fui-btn__top fui-flex__center">加入会员 <text class="fui-pl">享受权益</text></view>
+      <view class="fui-inner__box">
+        <view class="fui-intro__text">组件数：<text>100</text>+ /永久使用 </view>
+        <fui-button radius="100rpx" background="linear-gradient(180deg, #E3BF82 0%, #997B4A 100%)"
+          borderColor="rgba(0,0,0,0)" border-width="0" bindclick="purchase">立即开通</fui-button>
+        <view class="fui-menu__box">
+          <view class="fui-menu__item" wx:for="{{menus}}" wx:key="index" bindtap="href" data-index="{{index}}">
+            <image src="/static/images/member/icon_{{item.icon}}_3x.png"></image>
+            <view class="fui-title">{{item.title}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <fui-animation duration="{{500}}" animationType="{{['fade']}}" styles="{{styles}}" show="{{transShow}}"
+    bindclick="handleClick">
+    <view class="fui-ani__box">
+      <image class="fui-hd__img" src="/static/images/member/light/img_layer_3x.png" mode="widthFix"></image>
+      <view class="fui-flex__center fui-flex__column">
+        <view class="fui-ani__title">开通会员</view>
+        <view class="fui-desc">会员开通请前往 First UI官网(<text>firstui.cn</text>)，在官网购买开通会员后，前往个人中心订单页即可下载会员源码。
+        </view>
+        <fui-button width="400rpx" height="84rpx" radius="100rpx"
+          background="linear-gradient(180deg, #E3BF82 0%, #997B4A 100%)" borderColor="rgba(0,0,0,0)" border-width="0"
+          bindclick="getLink">复制官网链接</fui-button>
+      </view>
+    </view>
+  </fui-animation>
+</view>

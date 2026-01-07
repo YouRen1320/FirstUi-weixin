@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "数字滚轮",
+  "usingComponents": {
+    "fui-digital-roller": "/components/firstui/fui-digital-roller/fui-digital-roller"
+  }
+}

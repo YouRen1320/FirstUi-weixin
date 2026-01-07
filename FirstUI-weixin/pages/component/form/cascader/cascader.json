@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "级联选择器",
+  "usingComponents": {
+    "fui-cascader": "/components/firstui/fui-cascader/fui-cascader",
+    "fui-bottom-popup": "/components/firstui/fui-bottom-popup/fui-bottom-popup"
+  }
+}

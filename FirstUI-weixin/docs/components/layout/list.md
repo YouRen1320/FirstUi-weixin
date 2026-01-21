@@ -1,76 +1,59 @@
 # List 列表
 
-列表组件。
+列表组件，包含 List 和 ListCell。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-list": "/components/firstui/fui-list/fui-list",
-    "fui-list-cell": "/components/firstui/fui-list-cell/fui-list-cell"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
 <fui-list title="基础列表">
-  <fui-list-cell>列表项1</fui-list-cell>
-  <fui-list-cell>列表项2</fui-list-cell>
-  <fui-list-cell>列表项3</fui-list-cell>
+  <fui-list-cell>列表项 1</fui-list-cell>
+  <fui-list-cell>列表项 2</fui-list-cell>
 </fui-list>
 ```
 
-### 带箭头
+## 带箭头与点击效果
 
 ```html
-<fui-list>
-  <fui-list-cell arrow>带箭头</fui-list-cell>
-</fui-list>
+<fui-list-cell arrow bindclick="handleClick">
+  <text>跳转页面</text>
+</fui-list-cell>
 ```
 
-### 带图标
+## 自定义样式
 
 ```html
-<fui-list>
-  <fui-list-cell>
-    <fui-icon slot="left" name="setting"></fui-icon>
-    <text>设置</text>
-  </fui-list-cell>
-</fui-list>
+<fui-list-cell bottomBorder="{{false}}" padding="20rpx">
+  <view>自定义内容</view>
+</fui-list-cell>
 ```
 
-## List Props
+## API
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| title | 列表标题 | String | - |
-| padding | 内边距 | String | - |
+### List Props
 
-## ListCell Props
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| title | 列表标题 | string | - | - |
+| marginTop | margin-top 值 | number | 0 | - |
+| padding | 标题 padding | string | 32rpx 32rpx 20rpx | - |
+| footer | 底部说明文字 | string | - | - |
+| topBorder | 是否显示上边框 | boolean | true | - |
+| bottomBorder | 是否显示下边框 | boolean | false | - |
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| arrow | 是否显示箭头 | Boolean | `false` |
-| arrowColor | 箭头颜色 | String | `#B2B2B2` |
-| bottomBorder | 是否显示底部边框 | Boolean | `true` |
-| topBorder | 是否显示顶部边框 | Boolean | `false` |
-| padding | 内边距 | String | `24rpx 32rpx` |
+### ListCell Props
 
-## ListCell Events
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| arrow | 是否显示右侧箭头 | boolean | false | - |
+| highlight | 是否有点击效果 | boolean | true | - |
+| topBorder | 是否显示上边框 | boolean | false | - |
+| bottomBorder | 是否显示下边框 | boolean | true | - |
+| bottomLeft | 下边框 left 偏移 | number | -1 (默认继承) | - |
+| padding | 内边距 | string | 32rpx | - |
+| radius | 圆角值 | string | 0 | - |
+
+### ListCell Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| click | 点击时触发 | `event` |
-
-## ListCell Slots
-
-| 名称 | 说明 |
-| --- | --- |
-| default | 列表项内容 |
-| left | 左侧内容 |
-| right | 右侧内容 |
+| click | 点击触发 | `{ index }` |

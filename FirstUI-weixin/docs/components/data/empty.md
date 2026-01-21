@@ -1,54 +1,31 @@
-# Empty 空状态
+# Empty 缺省页
 
-空状态组件。
+空数据时的占位提示。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-empty": "/components/firstui/fui-empty/fui-empty"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-empty text="暂无数据"></fui-empty>
+<fui-empty></fui-empty>
 ```
 
-### 自定义图片
+## 自定义文本和图片
 
 ```html
-<fui-empty 
-  src="/images/empty.png" 
-  text="暂无内容">
-</fui-empty>
+<fui-empty src="/static/empty.png" title="暂无相关数据" descr="请稍后再试..."></fui-empty>
 ```
 
-### 带操作按钮
+## API
 
-```html
-<fui-empty text="暂无数据">
-  <fui-button slot="button" text="去添加" type="primary"></fui-button>
-</fui-empty>
-```
+### Props
 
-## Props
-
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| src | 图片地址 | String | - |
-| text | 提示文字 | String | `暂无数据` |
-| type | 类型 | String | - |
-| color | 文字颜色 | String | `#999` |
-| size | 文字大小 | Number/String | `28` |
-
-## Slots
-
-| 名称 | 说明 |
-| --- | --- |
-| button | 操作按钮 |
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| src | 图片地址 | string | - | - |
+| width | 图片宽度 | number | 576 | - |
+| height | 图片高度 | number | 318 | - |
+| title | 标题 | string | - | - |
+| descr | 描述 | string | - | - |
+| color | 标题颜色 | string | - | - |
+| size | 标题大小 | number | 32 | - |
+| marginTop | 顶部间距 | number | 0 | - |
+| isFixed | 是否固定定位 | boolean | false | - |

@@ -2,67 +2,53 @@
 
 单选框组件，用于单项选择。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-radio": "/components/firstui/fui-radio/fui-radio",
-    "fui-radio-group": "/components/firstui/fui-radio-group/fui-radio-group"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-radio-group bind:change="onChange">
-  <fui-radio value="1">选项1</fui-radio>
-  <fui-radio value="2">选项2</fui-radio>
+<fui-radio-group name="radio" model:value="{{val}}" bindchange="change">
+  <fui-label>
+    <fui-radio value="1"></fui-radio>
+    <text>选项一</text>
+  </fui-label>
+  <fui-label>
+    <fui-radio value="2"></fui-radio>
+    <text>选项二</text>
+  </fui-label>
 </fui-radio-group>
 ```
 
-### 默认选中
+## 修改颜色与圆角
 
 ```html
-<fui-radio-group value="2">
-  <fui-radio value="1">选项1</fui-radio>
-  <fui-radio value="2">选项2</fui-radio>
-</fui-radio-group>
+<fui-radio value="1" color="#FFB703" borderColor="#B2B2B2" borderRadius="8rpx"></fui-radio>
 ```
 
-### 禁用状态
+## 修改选中样式
 
 ```html
-<fui-radio value="1" disabled>禁用状态</fui-radio>
+<!-- styleType=2: 对号样式调整 -->
+<fui-radio value="1" style-type="{{2}}"></fui-radio>
 ```
 
-### 自定义颜色
+## API
 
-```html
-<fui-radio value="1" color="#8A2BE2" checked>自定义颜色</fui-radio>
-```
+### Props
 
-## Radio Props
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| value | 选项值 | string/number | - | - |
+| checked | 是否选中 | boolean | false | - |
+| disabled | 是否禁用 | boolean | false | - |
+| color | 选中背景颜色 | string | - | - |
+| borderColor | 未选中时边框颜色 | string | #ccc | - |
+| borderRadius | 圆角值 | string | 50% | - |
+| isCheckMark | 是否只展示对号 | boolean | false | - |
+| checkMarkColor | 对号颜色 | string | #fff | - |
+| scaleRatio | 缩放比例 | number/string | 1 | - |
+| styleType | 选中样式类型 | number | 1 | 1, 2 |
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| value | 单选框的值 | String/Number | - |
-| checked | 是否选中 | Boolean | `false` |
-| disabled | 是否禁用 | Boolean | `false` |
-| color | 选中时的颜色 | String | `#5B8FF9` |
-| styleType | 选中后样式类型 | String | - |
-
-## RadioGroup Props
-
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| value | 当前选中的值 | String/Number | - |
-
-## RadioGroup Events
+### Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| change | 选中项改变时触发 | `{ value }` |
+| change | 选中状态变化时触发 | `{ checked: boolean, value: any }` |

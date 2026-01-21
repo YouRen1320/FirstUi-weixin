@@ -1,70 +1,59 @@
 # Switch 开关
 
-开关选择器组件。
+开关选择器。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-switch": "/components/firstui/fui-switch/fui-switch"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-switch bind:change="onChange"></fui-switch>
+<fui-switch bindchange="change"></fui-switch>
 ```
 
-### 默认选中
+## 带文字插槽
 
 ```html
-<fui-switch checked></fui-switch>
+<fui-switch bindchange="change">
+  <text class="fui-switch--text">{{isOpen?'ON':'OFF'}}</text>
+</fui-switch>
 ```
 
-### 禁用状态
+## 带图标插槽
 
 ```html
-<fui-switch disabled></fui-switch>
-<fui-switch disabled checked></fui-switch>
+<fui-switch btnColor="#3d3d3d" color="#2C2C2C">
+  <image src="/static/icon.png" class="fui-icon--img"></image>
+</fui-switch>
 ```
 
-### 自定义颜色
+## Checkbox 样式
 
 ```html
-<fui-switch color="#8A2BE2" checked></fui-switch>
+<fui-switch type="checkbox" color="#FFB703" scaleRatio="{{1.2}}"></fui-switch>
 ```
 
-### 开关类型
+## API
 
-```html
-<fui-switch type="switch"></fui-switch>
-<fui-switch type="checkbox"></fui-switch>
-```
+### Props
 
-## Props
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| name | 组件名称 | string | - | - |
+| checked | 是否选中 | boolean | false | - |
+| disabled | 是否禁用 | boolean | false | - |
+| type | 样式类型 | string | switch | switch, checkbox |
+| color | 选中颜色 | string | - | - |
+| background | 背景颜色 | string | #fdfdfd | - |
+| btnColor | 按钮颜色 | string | - | - |
+| btnBgColor | 按钮背景颜色 | string | #fff | - |
+| scaleRatio | 缩放比例 | number | 1 | - |
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| checked | 是否选中 | Boolean | `false` |
-| disabled | 是否禁用 | Boolean | `false` |
-| type | 开关类型，可选值为 `switch` `checkbox` | String | `switch` |
-| color | 选中时的颜色 | String | `#5B8FF9` |
-| bgColor | 背景颜色 | String | - |
-| borderColor | 边框颜色 | String | - |
-
-## Events
+### Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| change | 选中状态改变时触发 | `{ checked }` |
+| change | 状态发生变化时触发 | `detail` |
 
-## Slots
+### Slots
 
-| 名称 | 说明 |
+| 插槽名 | 说明 |
 | --- | --- |
-| default | 圆形按钮内显示内容（仅 type=switch 有效） |
+| default | 按钮内部内容（如文字或图标） |

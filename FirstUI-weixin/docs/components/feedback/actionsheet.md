@@ -1,66 +1,43 @@
 # ActionSheet 上拉菜单
 
-上拉菜单组件。
+底部弹出的操作菜单。
 
-## 引入
+## 基础使用
 
-```json
-{
-  "usingComponents": {
-    "fui-actionsheet": "/components/firstui/fui-actionsheet/fui-actionsheet"
-  }
-}
+```html
+<fui-actionsheet show="{{show}}" itemList="{{itemList}}" bindclick="onClick"></fui-actionsheet>
 ```
 
-## 代码演示
-
-### 基础用法
+## 带提示信息
 
 ```html
 <fui-actionsheet 
-  show="{{show}}"
-  itemList="{{itemList}}"
-  bind:click="onClick"
-  bind:cancel="onCancel">
+  show="{{show}}" 
+  tips="确定要删除吗？" 
+  itemList="{{itemList}}" 
+  bindclick="onClick">
 </fui-actionsheet>
 ```
 
-```js
-Page({
-  data: {
-    show: false,
-    itemList: [
-      { text: '选项1' },
-      { text: '选项2' },
-      { text: '选项3' }
-    ]
-  }
-})
-```
+## API
 
-### 带标题
+### Props
 
-```html
-<fui-actionsheet 
-  show="{{show}}"
-  title="请选择"
-  itemList="{{itemList}}">
-</fui-actionsheet>
-```
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| show | 是否显示 | boolean | false | - |
+| itemList | 菜单列表 | array | [] | string[] / object[] |
+| tips | 提示信息 | string | - | - |
+| color | 提示文字颜色 | string | #7F7F7F | - |
+| size | 提示文字大小 | number | 26 | - |
+| radius | 是否圆角 | boolean | true | - |
+| isCancel | 是否显示取消按钮 | boolean | true | - |
+| theme | 主题模式 | string | light | light, dark |
+| maskClosable | 点击遮罩是否关闭 | boolean | false | - |
 
-## Props
-
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| show | 是否显示 | Boolean | `false` |
-| itemList | 菜单项列表 | Array | `[]` |
-| title | 标题 | String | - |
-| cancelText | 取消按钮文字 | String | `取消` |
-| showCancel | 是否显示取消按钮 | Boolean | `true` |
-
-## Events
+### Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| click | 点击菜单项时触发 | `{ index, item }` |
-| cancel | 点击取消时触发 | - |
+| click | 点击菜单项触发 | `{ index, ...item }` |
+| cancel | 点击取消或遮罩触发 | - |

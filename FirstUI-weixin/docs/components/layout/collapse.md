@@ -1,67 +1,57 @@
 # Collapse 折叠面板
 
-折叠面板组件。
+可以折叠/展开的内容区域。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-collapse": "/components/firstui/fui-collapse/fui-collapse",
-    "fui-collapse-item": "/components/firstui/fui-collapse-item/fui-collapse-item"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-collapse>
-  <fui-collapse-item title="标题1">
-    内容1
-  </fui-collapse-item>
-  <fui-collapse-item title="标题2">
-    内容2
+<fui-collapse bindchange="change">
+  <fui-collapse-item wx:for="{{items}}" wx:key="index" index="{{index}}" open="{{item.isOpen}}">
+    <view class="title">{{item.title}}</view>
+    <view slot="content" class="content">{{item.content}}</view>
   </fui-collapse-item>
 </fui-collapse>
 ```
 
-### 手风琴模式
+## 手风琴效果
+
+设置 `accordion` 属性开启手风琴模式（每次只能展开一个）。
 
 ```html
 <fui-collapse accordion>
-  <fui-collapse-item title="标题1">内容1</fui-collapse-item>
-  <fui-collapse-item title="标题2">内容2</fui-collapse-item>
+  <!-- items -->
 </fui-collapse>
 ```
 
-### 默认展开
+## Collapse 属性介绍
 
-```html
-<fui-collapse-item title="默认展开" open>
-  内容
-</fui-collapse-item>
-```
-
-## Collapse Props
-
-| 参数 | 说明 | 类型 | 默认值 |
+| 属性名 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
-| accordion | 是否手风琴模式 | Boolean | `false` |
+| accordion | Boolean | false | 是否开启手风琴效果 |
+| background | String | transparent | 背景颜色 |
 
-## CollapseItem Props
-
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| title | 标题 | String | - |
-| open | 是否展开 | Boolean | `false` |
-| disabled | 是否禁用 | Boolean | `false` |
-| animation | 是否开启动画 | Boolean | `true` |
-
-## Events
+## Collapse 事件介绍
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| change | 展开/收起时触发 | `{ open }` |
+| bindchange | 切换面板时触发 | `{ index: 索引, isOpen: 是否展开 }` |
+
+## CollapseItem 属性介绍
+
+| 属性名 | 类型 | 默认值 | 说明 |
+| --- | --- | --- | --- |
+| index | Number | 0 | 索引值，必填 |
+| disabled | Boolean | false | 是否禁用 |
+| open | Boolean | false | 是否展开 |
+| arrow | Boolean | true | 是否显示右侧箭头 |
+| arrowColor | String | #333 | 箭头颜色 |
+| background | String | #fff | 标题栏背景颜色 |
+| contentBg | String | #fff | 内容区域背景颜色 |
+| animation | Boolean | true | 是否开启过渡动画 |
+
+## CollapseItem 插槽
+
+| 插槽名 | 说明 |
+| --- | --- |
+| default | 标题栏内容 |
+| content | 展开的内容区域 |

@@ -1,75 +1,55 @@
 # Grid 宫格
 
-宫格布局组件。
+宫格组件，用于展示图标与标题。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-grid": "/components/firstui/fui-grid/fui-grid",
-    "fui-grid-item": "/components/firstui/fui-grid-item/fui-grid-item"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
 <fui-grid>
-  <fui-grid-item>
-    <fui-icon name="home"></fui-icon>
-    <text>首页</text>
-  </fui-grid-item>
-  <fui-grid-item>
-    <fui-icon name="category"></fui-icon>
-    <text>分类</text>
-  </fui-grid-item>
-  <fui-grid-item>
-    <fui-icon name="cart"></fui-icon>
-    <text>购物车</text>
-  </fui-grid-item>
-  <fui-grid-item>
-    <fui-icon name="my"></fui-icon>
-    <text>我的</text>
+  <fui-grid-item wx:for="{{items}}" wx:key="index" index="{{index}}" bindclick="handleClick">
+    <view class="content">
+      <image src="/icon.png" class="icon"></image>
+      <text>Grid</text>
+    </view>
   </fui-grid-item>
 </fui-grid>
 ```
 
-### 自定义列数
+## 自定义列数与边框
 
 ```html
-<fui-grid columns="3">
-  <!-- grid items -->
+<fui-grid columns="{{4}}" showBorder="{{false}}">
+  <fui-grid-item>...</fui-grid-item>
 </fui-grid>
 ```
 
-### 无边框
+## API
 
-```html
-<fui-grid border="{{false}}">
-  <!-- grid items -->
-</fui-grid>
-```
+### Grid Props
 
-## Grid Props
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| columns | 每行显示个数 | number | 3 | - |
+| showBorder | 是否显示边框 | boolean | true | - |
+| borderColor | 边框颜色 (nvue有效) | string | #EEEEEE | - |
+| square | 是否正方形显示 | boolean | true | - |
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| columns | 列数 | Number | `4` |
-| border | 是否显示边框 | Boolean | `true` |
-| square | 是否正方形 | Boolean | `false` |
+### GridItem Props
 
-## Grid Events
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| highlight | 是否有点击效果 | boolean | true | - |
+| backgroundColor | 背景颜色 | string | transparent | - |
+| index | 索引值 | number | 0 | - |
+
+### Grid Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| click | 点击宫格时触发 | `{ index }` |
+| click | 点击宫格项触发 | `{ index }` |
 
-## GridItem Events
+### GridItem Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| click | 点击宫格项时触发 | `event` |
+| click | 点击宫格项触发 | `{ index }` |

@@ -1,84 +1,94 @@
 # Input 输入框
 
-输入框组件，用于接收用户输入。
+输入框组件，增强了原生 input 组件，内置常用布局样式，支持标签、清除按钮、双向绑定等功能。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-input": "/components/firstui/fui-input/fui-input"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-input placeholder="请输入内容" bind:input="onInput"></fui-input>
+<fui-input placeholder="请输入用户名"></fui-input>
+<fui-input label="标题" borderTop placeholder="请输入文本"></fui-input>
 ```
 
-### 输入框类型
+## 密码框
 
 ```html
-<fui-input type="text" placeholder="文本输入"></fui-input>
-<fui-input type="number" placeholder="数字输入"></fui-input>
-<fui-input type="digit" placeholder="带小数点数字"></fui-input>
-<fui-input type="idcard" placeholder="身份证输入"></fui-input>
+<fui-input placeholder="请输入密码" password="{{password}}">
+  <fui-icon name="{{password?'invisible':'visible'}}" color="#B2B2B2" bindclick="change"></fui-icon>
+</fui-input>
 ```
 
-### 密码输入
+## 带清除按钮与双向绑定
 
 ```html
-<fui-input password placeholder="请输入密码"></fui-input>
+<fui-input label="标题" clearable model:value="{{text}}"></fui-input>
 ```
 
-### 禁用状态
+## 必填项与禁用状态
 
 ```html
-<fui-input disabled value="禁用状态"></fui-input>
+<fui-input required label="标题" placeholder="必填项"></fui-input>
+<fui-input disabled label="标题" placeholder="禁用状态"></fui-input>
 ```
 
-### 带清除按钮
+## 右侧按钮或左侧图标
 
 ```html
-<fui-input clearable bind:clear="onClear"></fui-input>
+<!-- 右侧按钮 -->
+<fui-input label="验证码" placeholder="请输入验证码">
+  <fui-button type="gray" width="200rpx" height="64rpx" size="{{28}}" text="获取验证码"></fui-button>
+</fui-input>
+
+<!-- 左侧图标 -->
+<fui-input placeholder="请输入手机号">
+  <view class="fui-left__icon" slot="left">
+    <fui-icon name="mobile" color="#333"></fui-icon>
+  </view>
+</fui-input>
 ```
 
-### 输入框边框
+## API
 
-```html
-<fui-input inputBorder borderColor="#e5e5e5" radius="8rpx"></fui-input>
-```
+### Props
 
-## Props
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| required | 是否为必填项 | boolean | false | - |
+| label | 左侧标题 | string | - | - |
+| clearable | 是否显示清除按钮 | boolean | false | - |
+| focus | 获取焦点 | boolean | false | - |
+| placeholder | 占位文本 | string | - | - |
+| name | 输入框名称 | string | - | - |
+| value | 输入框值 | string | - | - |
+| type | 输入类型 | string | text | text, digit, number, idcard |
+| password | 是否为密码输入 | boolean | false | - |
+| disabled | 是否禁用 | boolean | false | - |
+| readonly | 是否只读 | boolean | false | - |
+| maxlength | 最大输入长度 | number | 140 | - |
+| size | 字体大小，单位 rpx | number | 0 (默认32) | - |
+| color | 字体颜色 | string | #333 | - |
+| inputBorder | 是否显示 input 边框 | boolean | false | - |
+| isFillet | 是否显示圆角 | boolean | false | - |
+| radius | 自定义圆角值 | number | 8 | - |
+| borderTop | 是否显示上边框 | boolean | false | - |
+| borderBottom | 是否显示下边框 | boolean | true | - |
+| borderColor | 边框颜色 | string | - | - |
+| trim | 是否自动去除两端空格 | boolean | true | - |
+| textAlign | 文本对齐方式 | string | left | left, center, right |
+| backgroundColor | 背景颜色 | string | #FFFFFF | - |
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| value | 输入框的值 | String | - |
-| type | 输入类型，可选值为 `text` `number` `digit` `idcard` | String | `text` |
-| password | 是否为密码输入框 | Boolean | `false` |
-| placeholder | 占位提示文字 | String | - |
-| placeholderStyle | 占位符样式 | String | - |
-| disabled | 是否禁用 | Boolean | `false` |
-| readonly | 是否只读 | Boolean | `false` |
-| maxlength | 最大输入长度 | Number | `140` |
-| clearable | 是否显示清除按钮 | Boolean | `false` |
-| inputBorder | 是否显示边框 | Boolean | `false` |
-| borderColor | 边框颜色 | String | - |
-| focus | 是否自动聚焦 | Boolean | `false` |
-| textAlign | 文本对齐方式 | String | `left` |
-| min | 最小值（type 为 number/digit 时有效） | Number | - |
-| max | 最大值（type 为 number/digit 时有效） | Number | - |
-
-## Events
+### Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| input | 输入时触发 | `{ value }` |
-| focus | 聚焦时触发 | `event` |
-| blur | 失焦时触发 | `event` |
-| confirm | 点击完成按钮时触发 | `{ value }` |
-| clear | 点击清除按钮时触发 | - |
+| input | 输入框内容发生变化时触发 | `value` |
+| focus | 输入框聚焦时触发 | `detail` |
+| blur | 输入框失去焦点时触发 | `detail` |
+| confirm | 点击完成按钮时触发 | `detail` |
+| click | 点击输入框时触发（当 disabled=true 时不会触发） | `{ name: string }` |
+
+### Slots
+
+| 插槽名 | 说明 |
+| --- | --- |
+| default | 输入框右侧内容（例如按钮、图标） |
+| left | 输入框左侧内容（例如图标） |

@@ -1,113 +1,108 @@
 # Button 按钮
 
-按钮组件，用于触发一个操作。
+按钮组件，支持自定义大小、颜色、形状等常用样式，不仅保留了微信小程序原生 Button 的所有功能，还进行了丰富的扩展。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-button": "/components/firstui/fui-button/fui-button"
-  }
-}
-```
-
-## 代码演示
-
-### 按钮类型
-
-按钮支持 `primary`、`success`、`warning`、`danger`、`link`、`purple`、`gray` 七种类型。
+## 基础使用
 
 ```html
-<fui-button text="主要按钮" type="primary"></fui-button>
-<fui-button text="成功按钮" type="success"></fui-button>
-<fui-button text="警告按钮" type="warning"></fui-button>
-<fui-button text="危险按钮" type="danger"></fui-button>
-<fui-button text="链接按钮" type="link"></fui-button>
-<fui-button text="紫色按钮" type="purple"></fui-button>
-<fui-button text="灰色按钮" type="gray"></fui-button>
+<fui-button text="默认按钮"></fui-button>
+<fui-button type="success">success</fui-button>
+<fui-button type="warning">warning</fui-button>
+<fui-button type="danger">danger</fui-button>
+<fui-button type="purple">purple</fui-button>
+<fui-button type="link" color="#465CFF">链接 link</fui-button>
 ```
 
-### 朴素按钮
-
-通过 `plain` 属性将按钮设置为朴素按钮。
+## 禁用状态
 
 ```html
-<fui-button text="朴素按钮" type="primary" plain></fui-button>
+<fui-button disabled>禁用按钮</fui-button>
+<fui-button disabled loading>禁用按钮</fui-button>
+<fui-button disabled disabledBackground="#F8F8F8" disabledColor="#CCCCCC">禁用按钮</fui-button>
 ```
 
-### 禁用状态
-
-通过 `disabled` 属性禁用按钮。
+## 按钮形状
 
 ```html
-<fui-button text="禁用按钮" disabled></fui-button>
+<!-- 方形 -->
+<fui-button radius="0">方形按钮</fui-button>
+<!-- 圆形 -->
+<fui-button radius="96rpx">圆形按钮</fui-button>
 ```
 
-### 按钮尺寸
-
-通过 `btnSize` 属性设置按钮尺寸，可选值为 `medium`、`small`、`mini`。
+## 按钮大小
 
 ```html
-<fui-button text="中等按钮" btnSize="medium"></fui-button>
-<fui-button text="小型按钮" btnSize="small"></fui-button>
-<fui-button text="迷你按钮" btnSize="mini"></fui-button>
+<fui-button btn-size="medium">medium</fui-button>
+<fui-button type="warning" btn-size="small">small</fui-button>
+<fui-button type="danger" btn-size="mini">mini</fui-button>
 ```
 
-### 自定义颜色
-
-通过 `background` 和 `color` 属性自定义按钮颜色。
+## 自定义样式
 
 ```html
-<fui-button text="自定义按钮" background="#8A2BE2" color="#fff"></fui-button>
+<!-- 朴素按钮 -->
+<fui-button plain color="#465CFF" borderColor="#465CFF">默认大小</fui-button>
+<!-- 自定义宽高和字体大小 -->
+<fui-button type="purple" width="224rpx" height="84rpx" :size="28">小型按钮</fui-button>
+<!-- 渐变按钮 -->
+<fui-button background="linear-gradient(300deg, #6831FF 0%, #465CFF 100%)" border-width="0">渐变按钮</fui-button>
 ```
 
-### 加载状态
+## API
 
-通过 `loading` 属性设置按钮加载状态。
+### Props
 
-```html
-<fui-button text="加载中..." loading></fui-button>
-```
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| type | 样式类型 | string | primary | success, warning, danger, link, purple, gray |
+| background | 按钮背景色，当传入值时 `type` 失效 | string | - | - |
+| text | 按钮显示文本 | string | - | - |
+| color | 按钮字体颜色 | string | #fff | - |
+| disabledBackground | 按钮禁用背景色 | string | - | - |
+| disabledColor | 按钮禁用字体颜色 | string | - | - |
+| borderWidth | 边框宽度 | string | 1px | - |
+| borderColor | 边框颜色 | string | - | - |
+| btnSize | 按钮大小，优先级高于 width 和 height | string | - | medium, small, mini |
+| width | 宽度 | string | 100% | - |
+| height | 高度 | string | - | - |
+| size | 字体大小，单位 rpx | number/string | 0 | - |
+| bold | 是否加粗 | boolean | false | - |
+| margin | 外边距 | string | 0 | - |
+| radius | 圆角 | string | - | - |
+| plain | 是否镂空 | boolean | false | - |
+| disabled | 是否禁用 | boolean | false | - |
+| loading | 是否显示 loading | boolean | false | - |
+| formType | 用于 form 组件，点击分别会触发 form-type 的 submit/reset 事件 | string | - | submit, reset |
+| openType | 微信开放能力 | string | - | contact, share, getPhoneNumber, getUserInfo, launchApp, openSetting, feedback, chooseAvatar, agreePrivacyAuthorization, getRealtimePhoneNumber |
+| appParameter | 打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效 | string | - | - |
+| hoverStopPropagation | 指定是否阻止本节点的祖先节点出现点击态 | boolean | false | - |
+| lang | 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文 | string | en | - |
+| sessionFrom | 会话来源，open-type="contact"时有效 | string | - | - |
+| sendMessageTitle | 会话内消息卡片标题，open-type="contact"时有效 | string | - | - |
+| sendMessagePath | 会话内消息卡片点击跳转小程序路径，open-type="contact"时有效 | string | - | - |
+| sendMessageImg | 会话内消息卡片图片，open-type="contact"时有效 | string | - | - |
+| showMessageCard | 是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，open-type="contact"时有效 | boolean | false | - |
+| phoneNumberNoQuotaToast | 是否调用手机号快速验证，open-type="getphonenumber"时有效 | boolean | true | - |
+| index | 索引值，点击事件中会返回 | number/string | 0 | - |
 
-## Props
-
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| type | 按钮类型，可选值为 `primary` `success` `warning` `danger` `link` `purple` `gray` | String | `primary` |
-| background | 按钮背景色，设置后 type 属性失效 | String | - |
-| text | 按钮文本 | String | - |
-| color | 按钮文字颜色 | String | `#fff` |
-| disabledBackground | 禁用状态背景色 | String | - |
-| disabledColor | 禁用状态文字颜色 | String | - |
-| btnSize | 按钮尺寸，可选值为 `medium` `small` `mini` | String | - |
-| width | 按钮宽度 | String | `100%` |
-| height | 按钮高度 | String | `96rpx` |
-| size | 字体大小，单位 rpx | Number | `32` |
-| bold | 是否加粗文字 | Boolean | `false` |
-| margin | 外边距 | String | `0` |
-| radius | 圆角大小 | String | `16rpx` |
-| plain | 是否为朴素按钮 | Boolean | `false` |
-| disabled | 是否禁用 | Boolean | `false` |
-| loading | 是否显示加载状态 | Boolean | `false` |
-| formType | 用于 form 组件，可选值为 `submit` `reset` | String | - |
-| openType | 微信开放能力 | String | - |
-
-## Events
+### Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| click | 点击按钮时触发 | `{ index }` |
-| getuserinfo | 用户信息回调 | `detail` |
-| getphonenumber | 获取手机号回调 | `detail` |
-| contact | 客服消息回调 | `detail` |
-| opensetting | 打开设置回调 | `detail` |
-| chooseavatar | 选择头像回调 | `detail` |
-| launchapp | 打开 APP 回调 | `detail` |
-| error | 错误回调 | `detail` |
+| click | 点击按钮时触发 | `{ index: number }` |
+| getuserinfo | 用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与wx.getUserInfo返回的一致，open-type="getUserInfo"时有效 | `detail` |
+| contact | 客服消息回调，open-type="contact"时有效 | `detail` |
+| getphonenumber | 获取用户手机号回调，open-type="getPhoneNumber"时有效 | `detail` |
+| error | 当使用开放能力时，发生错误的回调，open-type="launchApp"时有效 | `detail` |
+| opensetting | 在打开授权设置页后回调，open-type="openSetting"时有效 | `detail` |
+| chooseavatar | 当用户选择头像之后的回调，open-type="chooseAvatar"时有效 | `detail` |
+| launchapp | 打开 APP 成功的回调，open-type="launchApp"时有效 | `detail` |
+| agreeprivacyauthorization | 用户同意隐私协议事件回调，open-type="agreePrivacyAuthorization"时有效 | `detail` |
+| getrealtimephonenumber | 手机号实时验证回调，open-type="getRealtimePhoneNumber"时有效 | `detail` |
 
-## Slots
+### Slots
 
-| 名称 | 说明 |
+| 插槽名 | 说明 |
 | --- | --- |
-| default | 按钮内容，会覆盖 text 属性 |
+| default | 按钮内容，设置了 `text` 属性时无效 |

@@ -1,73 +1,45 @@
 # Calendar 日历
 
-日历组件。
+日历组件，支持单选、多选、范围选择。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-calendar": "/components/firstui/fui-calendar/fui-calendar"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-calendar 
-  show="{{show}}"
-  bind:change="onChange">
-</fui-calendar>
+<fui-calendar type="{{1}}" bindchange="onChange"></fui-calendar>
 ```
 
-### 区间选择
+## 多选
 
 ```html
-<fui-calendar 
-  show="{{show}}"
-  isRange
-  bind:change="onChange">
-</fui-calendar>
+<fui-calendar type="{{2}}" bindchange="onChange"></fui-calendar>
 ```
 
-### 多选
+## 范围选择
 
 ```html
-<fui-calendar 
-  show="{{show}}"
-  isMultiple
-  bind:change="onChange">
-</fui-calendar>
+<fui-calendar type="{{3}}" bindchange="onChange"></fui-calendar>
 ```
 
-### 设置范围
+## API
 
-```html
-<fui-calendar 
-  show="{{show}}"
-  minDate="2024-01-01"
-  maxDate="2024-12-31">
-</fui-calendar>
-```
+### Props
 
-## Props
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| type | 选择类型 | number | 1 | 1:单选, 2:多选, 3:范围 |
+| value | 默认选中值 | array | [] | - |
+| minDate | 最小日期 | string | 2010-01-01 | - |
+| maxDate | 最大日期 | string | 2030-12-31 | - |
+| showLunar | 是否显示农历 | boolean | false | - |
+| language | 语言 | string | cn | cn, en |
+| color | 字体颜色 | string | #181818 | - |
+| activeColor | 选中文字颜色 | string | #FFFFFF | - |
+| activeBackground | 选中背景颜色 | string | #465CFF | - |
+| showBtn | 是否显示确定按钮 | boolean | false | - |
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| show | 是否显示 | Boolean | `false` |
-| isRange | 是否区间选择 | Boolean | `false` |
-| isMultiple | 是否一次性加载一年数据 | Boolean | `false` |
-| minDate | 最小日期 | String | - |
-| maxDate | 最大日期 | String | - |
-| value | 默认选中日期 | String/Array | - |
-| maxDays | 最多可选天数（区间选择时有效） | Number | - |
-
-## Events
+### Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| change | 选择日期时触发 | `{ date }` |
-| cancel | 取消时触发 | - |
+| change | 日期改变触发 | `{ value, week, lunar }` |
+| dateChange | 年月切换触发 | `{ year, month }` |

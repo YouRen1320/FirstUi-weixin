@@ -2,57 +2,43 @@
 
 对话框组件。
 
-## 引入
+## 基础使用
 
-```json
-{
-  "usingComponents": {
-    "fui-dialog": "/components/firstui/fui-dialog/fui-dialog"
-  }
-}
+```html
+<fui-dialog show="{{show}}" content="这是一个对话框" bindclick="onClick"></fui-dialog>
 ```
 
-## 代码演示
-
-### 基础用法
+## 自定义按钮
 
 ```html
 <fui-dialog 
-  show="{{show}}"
-  title="提示"
-  content="确定要删除吗？"
-  bind:click="onDialogClick">
+  show="{{show}}" 
+  title="标题" 
+  content="内容..." 
+  buttons="{{buttons}}" 
+  bindclick="onClick">
 </fui-dialog>
 ```
 
-### 带输入框
+## API
 
-```html
-<fui-dialog 
-  show="{{show}}"
-  title="请输入"
-  showInput
-  bind:click="onDialogClick">
-</fui-dialog>
-```
+### Props
 
-## Props
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| show | 是否显示 | boolean | false | - |
+| title | 标题 | string | 提示 | - |
+| color | 标题颜色 | string | #333 | - |
+| content | 内容文本 | string | - | - |
+| contentColor | 内容文本颜色 | string | #7F7F7F | - |
+| buttons | 按钮列表 | array | [{text:'取消'},{text:'确定',color:'#465CFF'}] | - |
+| background | 背景颜色 | string | #fff | - |
+| radius | 圆角值 | number | 24 | - |
+| maskClosable | 点击遮罩是否关闭 | boolean | true | - |
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| show | 是否显示 | Boolean | `false` |
-| title | 标题 | String | `提示` |
-| content | 内容 | String | - |
-| showCancel | 是否显示取消按钮 | Boolean | `true` |
-| cancelText | 取消按钮文字 | String | `取消` |
-| confirmText | 确认按钮文字 | String | `确定` |
-| showInput | 是否显示输入框 | Boolean | `false` |
-| placeholder | 输入框占位符 | String | - |
-
-## Events
+### Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| click | 点击按钮时触发 | `{ index, value }` |
-| cancel | 点击取消按钮时触发 | - |
-| confirm | 点击确认按钮时触发 | `{ value }` |
+| click | 点击按钮触发 | `{ index, ...button }` |
+| close | 点击遮罩关闭触发 | - |

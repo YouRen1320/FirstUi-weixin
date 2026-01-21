@@ -2,67 +2,64 @@
 
 复选框组件，用于多项选择。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-checkbox": "/components/firstui/fui-checkbox/fui-checkbox",
-    "fui-checkbox-group": "/components/firstui/fui-checkbox-group/fui-checkbox-group"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-checkbox value="1" checked>选项1</fui-checkbox>
-<fui-checkbox value="2">选项2</fui-checkbox>
-```
-
-### 复选框组
-
-```html
-<fui-checkbox-group bind:change="onChange">
-  <fui-checkbox value="1">苹果</fui-checkbox>
-  <fui-checkbox value="2">香蕉</fui-checkbox>
-  <fui-checkbox value="3">橘子</fui-checkbox>
+<fui-checkbox-group name="checkbox" model:value="{{vals}}" bindchange="change">
+  <fui-label>
+    <view class="fui-align__center">
+      <fui-checkbox value="1"></fui-checkbox>
+      <text class="fui-text">选中</text>
+    </view>
+  </fui-label>
+  <fui-label>
+    <view class="fui-align__center">
+      <fui-checkbox value="2"></fui-checkbox>
+      <text class="fui-text">未选中</text>
+    </view>
+  </fui-label>
 </fui-checkbox-group>
 ```
 
-### 禁用状态
+## 列表布局
 
 ```html
-<fui-checkbox value="1" disabled>禁用状态</fui-checkbox>
-<fui-checkbox value="2" disabled checked>禁用选中</fui-checkbox>
+<fui-checkbox-group>
+  <fui-label wx:for="{{items}}" wx:key="index">
+    <fui-list-cell>
+      <view class="fui-align__center">
+        <fui-checkbox checked="{{item.checked}}" value="{{item.value}}" color="#FFB703"></fui-checkbox>
+        <text class="fui-text">{{item.name}}</text>
+      </view>
+    </fui-list-cell>
+  </fui-label>
+</fui-checkbox-group>
 ```
 
-### 自定义颜色
+## 仅显示对号
 
 ```html
-<fui-checkbox value="1" color="#8A2BE2" checked>自定义颜色</fui-checkbox>
+<fui-checkbox isCheckMark checkMarkColor="#FF2B2B" scaleRatio="{{1.3}}" value="1"></fui-checkbox>
 ```
 
-## Checkbox Props
+## API
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| value | 复选框的值 | String/Number | - |
-| checked | 是否选中 | Boolean | `false` |
-| disabled | 是否禁用 | Boolean | `false` |
-| color | 选中时的颜色 | String | `#5B8FF9` |
-| borderColor | 边框颜色 | String | - |
+### Props
 
-## Checkbox Events
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| value | 选项值 | string/number | - | - |
+| checked | 是否选中 | boolean | false | - |
+| disabled | 是否禁用 | boolean | false | - |
+| color | 选中背景颜色 | string | - | - |
+| borderColor | 未选中时边框颜色 | string | #ccc | - |
+| borderRadius | 圆角值 | string | 50% | - |
+| isCheckMark | 是否只展示对号，无边框背景 | boolean | false | - |
+| checkMarkColor | 对号颜色 | string | #fff | - |
+| scaleRatio | 缩放比例 | number/string | 1 | - |
+
+### Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| change | 选中状态改变时触发 | `{ checked, value }` |
-
-## CheckboxGroup Events
-
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| change | 选中项改变时触发 | `{ value: Array }` |
+| change | 选中状态变化时触发 | `{ checked: boolean, value: any }` |

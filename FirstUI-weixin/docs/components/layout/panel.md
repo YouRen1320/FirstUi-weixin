@@ -1,62 +1,59 @@
 # Panel 面板
 
-面板组件，用于展示信息列表。
+常用的布局组件，包含头部、内容区域等。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-panel": "/components/firstui/fui-panel/fui-panel"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-panel 
-  title="面板标题" 
-  list="{{panelList}}">
-</fui-panel>
+<fui-panel panelData="{{panelData}}"></fui-panel>
 ```
 
-```js
+```javascript
 Page({
   data: {
-    panelList: [
-      { src: '/images/icon1.png', text: '选项1' },
-      { src: '/images/icon2.png', text: '选项2' },
-      { src: '/images/icon3.png', text: '选项3' }
-    ]
+    panelData: {
+      head: '基础使用',
+      list: [
+        {
+          src: '/static/images/common/logo.png',
+          title: '标题',
+          desc: '描述信息'
+        }
+      ]
+    }
   }
 })
 ```
 
-### 图片和内容位置对调
+## 属性介绍
 
-```html
-<fui-panel 
-  title="标题" 
-  list="{{panelList}}"
-  rowReverse>
-</fui-panel>
-```
-
-## Props
-
-| 参数 | 说明 | 类型 | 默认值 |
+| 属性名 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
-| title | 面板标题 | String | - |
-| list | 面板数据列表 | Array | `[]` |
-| srcKey | 图片地址 key | String | `src` |
-| textKey | 文本内容 key | String | `text` |
-| rowReverse | 图片与内容是否对换位置 | Boolean | `false` |
+| panelData | Object | {} | 面板数据，格式详见上方示例 |
+| fields | Object | {} | 字段映射，默认对应关系：head, list, src, title, desc, source, time, extra |
+| background | String | - | 背景颜色 |
+| highlight | Boolean | true | 是否有点击效果 |
+| marginTop | Number/String | 0 | 上外边距 |
+| marginBottom | Number/String | 0 | 下外边距 |
+| padding | Number/String | 32 | 左右内边距 |
+| isBorder | Boolean | true | 是否显示外层边框 |
+| hdBorder | Boolean | true | 是否显示头部下划线 |
+| bdBorder | Boolean | true | 是否显示 列表项 下划线 (不包括最后的一项) |
+| width | Number/String | 120 | 图片宽度，单位rpx |
+| height | Number/String | 120 | 图片高度，单位rpx |
+| radius | Number/String | 0 | 图片圆角 |
+| size | Number/String | 32 | 标题字体大小 |
+| color | String | - | 标题颜色 |
+| fontWeight | String/Number | normal | 标题粗细 |
+| descSize | Number/String | 28 | 描述文字大小 |
+| descColor | String | - | 描述文字颜色 |
+| infoSize | Number/String | 24 | 底部辅助信息字体大小 |
+| infoColor | String | - | 底部辅助信息颜色 |
+| flexStart | Boolean | false | 列表项是否顶部对齐 |
+| rowReverse | Boolean | false | 图片与内容是否反转位置 |
 
-## Events
+## 事件介绍
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| click | 点击面板项时触发 | `{ index, item }` |
+| bindclick | 点击列表项时触发 | `{ index: 索引, ...item数据 }` |

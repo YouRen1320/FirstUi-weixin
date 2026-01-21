@@ -2,70 +2,43 @@
 
 顶部消息提示组件。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-message": "/components/firstui/fui-message/fui-message"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-message id="fui-message"></fui-message>
+<fui-message id="msg"></fui-message>
+
+<!-- JS 调用 -->
+<!-- this.selectComponent('#msg').show({ text: '这是一条消息提示' }) -->
 ```
 
-```js
-Page({
-  showMessage() {
-    this.selectComponent('#fui-message').show({
-      text: '这是一条消息提示'
-    })
-  }
-})
+## 自定义样式
+
+```html
+<!-- JS 调用 -->
+<!-- this.selectComponent('#msg').show({ text: '错误提示', background: '#FF2B2B' }) -->
 ```
 
-### 不同类型
+## API
 
-```js
-// 成功消息
-this.selectComponent('#fui-message').show({
-  text: '操作成功',
-  type: 'success'
-})
+### Props
 
-// 警告消息
-this.selectComponent('#fui-message').show({
-  text: '警告信息',
-  type: 'warning'
-})
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| background | 背景颜色 | string | rgba(0,0,0,0.6) | - |
+| color | 字体颜色 | string | #fff | - |
+| size | 字体大小 | number | 30 | - |
+| textAlign | 文本对齐方式 | string | center | left, center, right |
+| top | 顶部距离 | number | 0 | - |
+| zIndex | 层级 | number | 1001 | - |
 
-// 错误消息
-this.selectComponent('#fui-message').show({
-  text: '错误信息',
-  type: 'error'
-})
-```
+### Methods
 
-## Props
+| 方法名 | 说明 | 参数 |
+| --- | --- | --- |
+| show | 显示消息 | `options: { text, duration, background, color }` |
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| zIndex | z-index | Number | `1001` |
+### Slots
 
-## Methods
-
-### show(options)
-
-显示消息。
-
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| text | 提示文字 | String | - |
-| type | 类型 `success` `warning` `error` `info` | String | `info` |
-| duration | 显示时长 | Number | `2000` |
+| 插槽名 | 说明 |
+| --- | --- |
+| default | 自定义消息内容 |

@@ -1,82 +1,57 @@
 # Toast 轻提示
 
-轻提示组件。
+轻量级反馈/提示，支持自定义内容。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-toast": "/components/firstui/fui-toast/fui-toast"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-toast id="fui-toast"></fui-toast>
+<fui-toast id="toast"></fui-toast>
+
+<!-- JS 调用 -->
+<!-- this.selectComponent('#toast').show({ text: '操作成功' }) -->
 ```
 
-```js
-Page({
-  showToast() {
-    this.selectComponent('#fui-toast').show({
-      title: '提示信息'
-    })
-  }
-})
+## 自定义图标
+
+```html
+<fui-toast id="toast"></fui-toast>
+
+<!-- JS 调用 -->
+<!-- this.selectComponent('#toast').show({ text: '成功', src: '/static/success.png' }) -->
 ```
 
-### 不同类型
+## 自定义内容
 
-```js
-// 成功提示
-this.selectComponent('#fui-toast').show({
-  title: '操作成功',
-  type: 'success'
-})
-
-// 失败提示
-this.selectComponent('#fui-toast').show({
-  title: '操作失败',
-  type: 'fail'
-})
-
-// 加载提示
-this.selectComponent('#fui-toast').show({
-  title: '加载中...',
-  type: 'loading'
-})
+```html
+<fui-toast id="toast">
+  <view class="custom-toast">
+    <fui-icon name="checkbox" color="#fff"></fui-icon>
+    <text>自定义提示</text>
+  </view>
+</fui-toast>
 ```
 
-### 自定义图标
+## API
 
-```js
-this.selectComponent('#fui-toast').show({
-  title: '自定义图标',
-  icon: 'checkbox'
-})
-```
+### Props
 
-## Props
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| padding | padding值 | string | 32rpx | - |
+| background | 背景颜色 | string | rgba(0,0,0,.6) | - |
+| width | 宽度 | number | 64 | - |
+| size | 字体大小 | number | 30 | - |
+| color | 字体颜色 | string | #fff | - |
+| zIndex | 层级 | number | 1001 | - |
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| zIndex | z-index | Number | `1001` |
-| duration | 显示时长（毫秒） | Number | `2000` |
+### Methods
 
-## Methods
+| 方法名 | 说明 | 参数 |
+| --- | --- | --- |
+| show | 显示提示 | `options: { text, src, duration }` |
 
-### show(options)
+### Slots
 
-显示提示。
-
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| title | 提示文字 | String | - |
-| type | 类型 `success` `fail` `loading` | String | - |
-| icon | 自定义图标 | String | - |
-| duration | 显示时长 | Number | `2000` |
+| 插槽名 | 说明 |
+| --- | --- |
+| default | 自定义提示内容 |

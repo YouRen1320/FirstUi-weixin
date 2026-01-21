@@ -1,64 +1,58 @@
 # Badge 徽章
 
-徽章组件，用于展示数字或状态标记。
+徽章组件，可自定义颜色、已读未读状态、红点等。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-badge": "/components/firstui/fui-badge/fui-badge"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-badge value="5"></fui-badge>
-<fui-badge value="99"></fui-badge>
-<fui-badge value="99+"></fui-badge>
-```
+<!-- 基础用法 -->
+<fui-badge value="1"></fui-badge>
+<fui-badge type="success" value="2"></fui-badge>
+<fui-badge type="warning" value="3"></fui-badge>
+<fui-badge type="danger" value="4"></fui-badge>
+<fui-badge type="purple" value="5"></fui-badge>
 
-### 最大值
+<!-- 自定义颜色 -->
+<fui-badge value="6" background="#eee" color="#333"></fui-badge>
 
-通过 `max` 属性设置最大值，超过时显示 `{max}+`。
-
-```html
-<fui-badge value="200" max="99"></fui-badge>
-```
-
-### 小红点
-
-通过 `dot` 属性设置为小红点模式。
-
-```html
+<!-- 红点模式 -->
 <fui-badge dot></fui-badge>
 ```
 
-### 自定义颜色
+## 绝对定位
 
-通过 `background` 和 `color` 属性自定义颜色。
+通常用于图标右上角的消息提示。
 
 ```html
-<fui-badge value="NEW" background="#007aff" color="#fff"></fui-badge>
+<view class="fui-item__img-box">
+  <image class="fui-item__img" src="/static/images/common/icon_tabbar_3x.png" mode="widthFix"></image>
+  <!-- max属性控制最大显示数值 -->
+  <fui-badge absolute type="danger" value="{{200}}" max="{{99}}"></fui-badge>
+</view>
 ```
 
-## Props
+## API
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| value | 徽章内容 | String/Number | - |
-| max | 最大值，超过时显示 `{max}+` | Number | - |
-| dot | 是否显示为小红点 | Boolean | `false` |
-| background | 背景颜色 | String | `#ff0000` |
-| color | 文字颜色 | String | `#fff` |
-| size | 字体大小，单位 rpx | Number | `20` |
+### Props
 
-## Events
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| value | 显示内容 | string/number | - | - |
+| max | 最大值，超过最大值显示 `${max}+`，仅当 value 为数字时有效 | number/string | -1 | - |
+| type | 样式类型 | string | primary | success, warning, danger, purple, white |
+| background | 背景色，如果设置背景则 type 失效 | string | - | - |
+| color | 字体颜色 | string | #FFFFFF | - |
+| dot | 是否显示为圆点 | boolean | false | - |
+| marginTop | margin-top 值，单位 rpx | string/number | 0 | - |
+| marginLeft | margin-left 值，单位 rpx | string/number | 0 | - |
+| marginRight | margin-right 值，单位 rpx | string/number | 0 | - |
+| absolute | 是否绝对定位 | boolean | false | - |
+| top | 绝对定位 top 值 | string | -8rpx | - |
+| right | 绝对定位 right 值 | string | -18rpx | - |
+| scaleRatio | 缩放比例 | number | 1 | - |
+
+### Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| click | 点击徽章时触发 | `event` |
+| click | 点击 badge 时触发 | - |

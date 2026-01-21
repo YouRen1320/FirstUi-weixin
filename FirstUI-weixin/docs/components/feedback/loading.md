@@ -1,54 +1,37 @@
 # Loading 加载
 
-加载提示组件。
+加载状态指示器。
 
-## 引入
-
-```json
-{
-  "usingComponents": {
-    "fui-loading": "/components/firstui/fui-loading/fui-loading"
-  }
-}
-```
-
-## 代码演示
-
-### 基础用法
+## 基础使用
 
 ```html
-<fui-loading show="{{loading}}"></fui-loading>
+<fui-loading></fui-loading>
 ```
 
-### 带文字
+## 横向布局
 
 ```html
-<fui-loading show="{{loading}}" text="加载中..."></fui-loading>
+<fui-loading type="row" text="正在加载..."></fui-loading>
 ```
 
-### 自定义样式
+## 更换图标
 
 ```html
-<fui-loading 
-  show="{{loading}}"
-  text="加载中..."
-  background="rgba(0,0,0,0.6)"
-  color="#fff">
-</fui-loading>
+<fui-loading srcCol="/static/loading.png" text="加载中"></fui-loading>
 ```
 
-## Props
+## API
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| show | 是否显示 | Boolean | `false` |
-| text | 提示文字 | String | - |
-| background | 遮罩背景色 | String | `rgba(0,0,0,0.4)` |
-| color | 文字颜色 | String | `#fff` |
-| zIndex | z-index | Number | `996` |
+### Props
 
-## Events
-
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| click | 点击时触发 | - |
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| type | 布局类型 | string | col | col, row |
+| text | 提示文本 | string | 加载中 | - |
+| color | 文本颜色 (row类型为 rowColor) | string | #7F7F7F | - |
+| size | 文本大小 | number | 26 | - |
+| srcCol | 纵向布局图标 | string | (base64) | - |
+| srcRow | 横向布局图标 | string | (base64) | - |
+| isFixed | 是否固定显示 | boolean | true | - |
+| isMask | 是否显示遮罩 (仅isFixed=true) | boolean | false | - |
+| maskBgColor | 遮罩背景色 | string | transparent | - |
